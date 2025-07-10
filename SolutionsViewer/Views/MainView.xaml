@@ -15,8 +15,15 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Text="{Binding SelectedCategory}" />
-        <ComboBox Grid.Row="1" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" />
+        <ComboBox Grid.Row="0" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" />
+        <ListView Grid.Row="1" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}"/>
+        <Grid Grid.Row="2">
+            <StackPanel x:Name="Input_0" Visibility="{Binding InputType0Visible, Converter={StaticResource BoolToVis}}">
+                <Label Content="String" />
+                <TextBox Text="String"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
