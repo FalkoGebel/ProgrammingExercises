@@ -61,11 +61,38 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
+        /// </summary>
+        public static string Categories_01_BasicExercises {
+            get {
+                return ResourceManager.GetString("Categories_01_BasicExercises", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Programming Exercises Solutions Viewer ähnelt.
         /// </summary>
         public static string MainView_Title {
             get {
                 return ResourceManager.GetString("MainView_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print Hello and Name ähnelt.
+        /// </summary>
+        public static string Tasks_01_BasicExercises_01 {
+            get {
+                return ResourceManager.GetString("Tasks_01_BasicExercises_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Second Task ähnelt.
+        /// </summary>
+        public static string Tasks_01_BasicExercises_02 {
+            get {
+                return ResourceManager.GetString("Tasks_01_BasicExercises_02", resourceCulture);
             }
         }
     }
