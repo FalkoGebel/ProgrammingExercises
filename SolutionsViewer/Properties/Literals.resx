@@ -117,16 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Categories_01_BasicExercises" xml:space="preserve">
+  <data name="BasicExercises_01" xml:space="preserve">
+    <value>Print Hello and Name</value>
+  </data>
+  <data name="BasicExercises_02" xml:space="preserve">
+    <value>Second Task</value>
+  </data>
+  <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
+  </data>
+  <data name="FieldCaption_Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="MainView_Title" xml:space="preserve">
     <value>Programming Exercises Solutions Viewer</value>
   </data>
-  <data name="Tasks_01_BasicExercises_01" xml:space="preserve">
-    <value>Print Hello and Name</value>
+  <data name="Output_Label" xml:space="preserve">
+    <value>Result</value>
   </data>
-  <data name="Tasks_01_BasicExercises_02" xml:space="preserve">
-    <value>Second Task</value>
+  <data name="StartButton_Caption" xml:space="preserve">
+    <value>Start</value>
   </data>
 </root>
