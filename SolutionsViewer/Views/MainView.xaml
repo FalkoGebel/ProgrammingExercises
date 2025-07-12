@@ -16,14 +16,26 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
         <ComboBox Grid.Row="0" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" />
         <ListView Grid.Row="1" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}"/>
         <Grid Grid.Row="2">
-            <StackPanel x:Name="Input_0" Visibility="{Binding InputType0Visible, Converter={StaticResource BoolToVis}}">
-                <Label Content="String" />
-                <TextBox Text="String"/>
+            <StackPanel Visibility="{Binding InputType0Visible, Converter={StaticResource BoolToVis}}">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputType0Field1Caption}" />
+                    <TextBox Text="{Binding InputType0Field1Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType0Command}" />
             </StackPanel>
         </Grid>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">
+            <Label Content="{x:Static p:Literals.Output_Label}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" />
+            <TextBlock Text="{Binding Result}" Margin="10,10,10,10" />
+        </StackPanel>
     </Grid>
 </Window>

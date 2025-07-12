@@ -61,11 +61,38 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print Hello and Name ähnelt.
+        /// </summary>
+        public static string BasicExercises_01 {
+            get {
+                return ResourceManager.GetString("BasicExercises_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Second Task ähnelt.
+        /// </summary>
+        public static string BasicExercises_02 {
+            get {
+                return ResourceManager.GetString("BasicExercises_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
-        public static string Categories_01_BasicExercises {
+        public static string Categories_01 {
             get {
-                return ResourceManager.GetString("Categories_01_BasicExercises", resourceCulture);
+                return ResourceManager.GetString("Categories_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Name ähnelt.
+        /// </summary>
+        public static string FieldCaption_Name {
+            get {
+                return ResourceManager.GetString("FieldCaption_Name", resourceCulture);
             }
         }
         
@@ -79,20 +106,20 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Print Hello and Name ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Result ähnelt.
         /// </summary>
-        public static string Tasks_01_BasicExercises_01 {
+        public static string Output_Label {
             get {
-                return ResourceManager.GetString("Tasks_01_BasicExercises_01", resourceCulture);
+                return ResourceManager.GetString("Output_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Second Task ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Start ähnelt.
         /// </summary>
-        public static string Tasks_01_BasicExercises_02 {
+        public static string StartButton_Caption {
             get {
-                return ResourceManager.GetString("Tasks_01_BasicExercises_02", resourceCulture);
+                return ResourceManager.GetString("StartButton_Caption", resourceCulture);
             }
         }
     }
