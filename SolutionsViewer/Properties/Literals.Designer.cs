@@ -70,7 +70,7 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Second Task ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum of Two Numbers ähnelt.
         /// </summary>
         public static string BasicExercises_02 {
             get {
@@ -93,6 +93,24 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Name {
             get {
                 return ResourceManager.GetString("FieldCaption_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number 1 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number1 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number 2 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number2 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number2", resourceCulture);
             }
         }
         

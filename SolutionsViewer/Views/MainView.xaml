@@ -27,10 +27,21 @@
         <Grid Grid.Row="2">
             <StackPanel Visibility="{Binding InputType0Visible, Converter={StaticResource BoolToVis}}">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="{Binding InputType0Field1Caption}" />
-                    <TextBox Text="{Binding InputType0Field1Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                    <Label Content="{Binding InputField1Caption}" />
+                    <TextBox Text="{Binding InputField1Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
                 </StackPanel>
                 <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType0Command}" />
+            </StackPanel>
+            <StackPanel Visibility="{Binding InputType1Visible, Converter={StaticResource BoolToVis}}">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField1Caption}" />
+                    <TextBox Text="{Binding InputField1Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField2Caption}" />
+                    <TextBox Text="{Binding InputField2Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType1Command}" />
             </StackPanel>
         </Grid>
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">

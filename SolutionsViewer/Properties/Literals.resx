@@ -121,13 +121,19 @@
     <value>Print Hello and Name</value>
   </data>
   <data name="BasicExercises_02" xml:space="preserve">
-    <value>Second Task</value>
+    <value>Sum of Two Numbers</value>
   </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
   <data name="FieldCaption_Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="FieldCaption_Number1" xml:space="preserve">
+    <value>Number 1</value>
+  </data>
+  <data name="FieldCaption_Number2" xml:space="preserve">
+    <value>Number 2</value>
   </data>
   <data name="MainView_Title" xml:space="preserve">
     <value>Programming Exercises Solutions Viewer</value>
