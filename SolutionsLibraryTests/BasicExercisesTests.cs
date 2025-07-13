@@ -18,5 +18,16 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(5, 10, 15)]
+        [DataRow(0.75, -0.01, 0.74)]
+        [DataRow(101220, 1937.7752, 103157.7752)]
+        public void Exercise_02_input_two_numbers_and_return_sum(double number1, double number2, double sum)
+        {
+            double result = BasicExercises.SumOfTwoNumbers(number1, number2);
+
+            result.Should().Be(sum);
+        }
     }
 }
