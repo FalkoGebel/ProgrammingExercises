@@ -123,6 +123,12 @@
   <data name="BasicExercises_02" xml:space="preserve">
     <value>Sum of Two Numbers</value>
   </data>
+  <data name="BasicExercises_03" xml:space="preserve">
+    <value>Divide Two Numbers</value>
+  </data>
+  <data name="BasicExercises_05" xml:space="preserve">
+    <value>Swap Two Numbers</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

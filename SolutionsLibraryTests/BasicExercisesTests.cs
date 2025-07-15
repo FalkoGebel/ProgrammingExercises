@@ -29,5 +29,28 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(sum);
         }
+
+        [DataTestMethod]
+        [DataRow(5, 10, 0.5)]
+        [DataRow(0.75, -0.01, -75)]
+        [DataRow(20, 4, 5)]
+        public void Exercise_03_input_two_numbers_and_return_quotient(double number1, double number2, double quotient)
+        {
+            double result = BasicExercises.DivideTwoNumbers(number1, number2);
+
+            result.Should().Be(quotient);
+        }
+
+        [DataTestMethod]
+        [DataRow(5, 10)]
+        [DataRow(0.75, -0.01)]
+        [DataRow(20, 4)]
+        public void Exercise_05_input_two_numbers_and_return_them_swapped(double number1, double number2)
+        {
+            (double first, double second) = BasicExercises.SwapTwoNumbers(number1, number2);
+
+            first.Should().Be(number2);
+            second.Should().Be(number1);
+        }
     }
 }

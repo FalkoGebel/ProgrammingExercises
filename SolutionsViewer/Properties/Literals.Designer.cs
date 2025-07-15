@@ -79,6 +79,24 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Divide Two Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_03 {
+            get {
+                return ResourceManager.GetString("BasicExercises_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Swap Two Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_05 {
+            get {
+                return ResourceManager.GetString("BasicExercises_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

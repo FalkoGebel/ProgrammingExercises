@@ -8,7 +8,9 @@ namespace SolutionsViewer.ViewModels
     {
         private readonly List<(string, int, string[])> _tasksBasicExercises = [
             (Properties.Literals.BasicExercises_01,0,[Properties.Literals.FieldCaption_Name]),
-            (Properties.Literals.BasicExercises_02,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2])
+            (Properties.Literals.BasicExercises_02,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_03,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_05,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2])
         ];
 
         [ObservableProperty]
@@ -21,7 +23,7 @@ namespace SolutionsViewer.ViewModels
         }
 
         [ObservableProperty]
-        private List<string> _categories = [Properties.Literals.Categories_01, "Second Category"];
+        private List<string> _categories = [Properties.Literals.Categories_01];
 
         [ObservableProperty]
         private string _selectedTask = string.Empty;
@@ -68,12 +70,24 @@ namespace SolutionsViewer.ViewModels
         [RelayCommand]
         private void ProcessInputType1()
         {
+            if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
+            {
+                Result = "Invalid input. Please enter valid numbers.";
+                return;
+            }
+
             if (SelectedTask == Properties.Literals.BasicExercises_02)
             {
-                if (double.TryParse(InputField1Value, out double number1) && double.TryParse(InputField2Value, out double number2))
-                    Result = $"{number1} {(number2 >= 0 ? '+' : '-')} {Math.Abs(number2)} = {BasicExercises.SumOfTwoNumbers(number1, number2)}";
-                else
-                    Result = "Invalid input. Please enter valid numbers.";
+                Result = $"{number1} {(number2 >= 0 ? '+' : '-')} {Math.Abs(number2)} = {BasicExercises.SumOfTwoNumbers(number1, number2)}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_03)
+            {
+                Result = $"{number1} / {number2} = {BasicExercises.DivideTwoNumbers(number1, number2)}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_05)
+            {
+                (double first, double second) = BasicExercises.SwapTwoNumbers(number1, number2);
+                Result = $"Number 1: {first}\nNumber 2: {second}";
             }
         }
 
