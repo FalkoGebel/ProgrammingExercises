@@ -88,6 +88,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Specified Operations Results ähnelt.
+        /// </summary>
+        public static string BasicExercises_04 {
+            get {
+                return ResourceManager.GetString("BasicExercises_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Swap Two Numbers ähnelt.
         /// </summary>
         public static string BasicExercises_05 {

@@ -41,6 +41,22 @@ namespace SolutionsLibraryTests
             result.Should().Be(quotient);
         }
 
+        [TestMethod]
+        public void Exercise_04_return_correct_results()
+        {
+            int expectedResult1 = 23,
+                expectedResult2 = 5,
+                expectedResult3 = 12,
+                expectedResult4 = 3;
+
+            (int result1, int result2, int result3, int result4) = BasicExercises.SpecifiedOperationsResults();
+
+            result1.Should().Be(expectedResult1);
+            result2.Should().Be(expectedResult2);
+            result3.Should().Be(expectedResult3);
+            result4.Should().Be(expectedResult4);
+        }
+
         [DataTestMethod]
         [DataRow(5, 10)]
         [DataRow(0.75, -0.01)]

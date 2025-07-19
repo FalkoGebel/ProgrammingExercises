@@ -126,6 +126,9 @@
   <data name="BasicExercises_03" xml:space="preserve">
     <value>Divide Two Numbers</value>
   </data>
+  <data name="BasicExercises_04" xml:space="preserve">
+    <value>Specified Operations Results</value>
+  </data>
   <data name="BasicExercises_05" xml:space="preserve">
     <value>Swap Two Numbers</value>
   </data>
