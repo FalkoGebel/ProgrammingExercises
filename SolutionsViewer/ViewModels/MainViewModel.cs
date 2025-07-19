@@ -10,6 +10,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_01,0,[Properties.Literals.FieldCaption_Name]),
             (Properties.Literals.BasicExercises_02,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_03,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_04,2,[]),
             (Properties.Literals.BasicExercises_05,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2])
         ];
 
@@ -42,6 +43,9 @@ namespace SolutionsViewer.ViewModels
 
         [ObservableProperty]
         private bool _inputType1Visible;
+
+        [ObservableProperty]
+        private bool _inputType2Visible;
 
         [ObservableProperty]
         private string _inputField1Caption = string.Empty;
@@ -91,6 +95,20 @@ namespace SolutionsViewer.ViewModels
             }
         }
 
+        [RelayCommand]
+        private void ProcessInputType2()
+        {
+            if (SelectedTask == Properties.Literals.BasicExercises_04)
+            {
+                (int result1, int result2, int result3, int result4) = BasicExercises.SpecifiedOperationsResults();
+
+                Result = $"-1 + 4 * 6\t\t=\t{result1}\n" +
+                         $"(35 + 5) % 7\t\t=\t{result2}\n" +
+                         $"14 + -4 * 6 / 11\t\t=\t{result3}\n" +
+                         $"2 + 15 / 6 * 1 - 7 % 2\t=\t{result4}";
+            }
+        }
+
         private void EvaluateSelectedCategory()
         {
             if (SelectedCategory == Properties.Literals.Categories_01)
@@ -104,25 +122,32 @@ namespace SolutionsViewer.ViewModels
             // Input types
             // 0: one string
             // 1: two numbers
+            // 2: no input
 
             InputType0Visible = false;
             InputType1Visible = false;
+            InputType2Visible = false;
             InputField1Value = string.Empty;
             InputField2Value = string.Empty;
 
             if (SelectedCategory == Properties.Literals.Categories_01)
             {
                 var task = _tasksBasicExercises.Where(t => t.Item1 == SelectedTask).FirstOrDefault();
-                InputField1Caption = task.Item3[0];
 
                 if (task.Item2 == 0)
                 {
+                    InputField1Caption = task.Item3[0];
                     InputType0Visible = true;
                 }
                 else if (task.Item2 == 1)
                 {
+                    InputField1Caption = task.Item3[0];
                     InputField2Caption = task.Item3[1];
                     InputType1Visible = true;
+                }
+                else if (task.Item2 == 2)
+                {
+                    InputType2Visible = true;
                 }
             }
         }

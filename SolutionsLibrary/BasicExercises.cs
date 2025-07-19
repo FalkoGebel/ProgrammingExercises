@@ -2,6 +2,7 @@
 
 
 
+
 namespace SolutionsLibrary
 {
     public static class BasicExercises
@@ -36,5 +37,8 @@ namespace SolutionsLibrary
         /// <param name="second">Second number to swap.</param>
         /// <returns>Swapped numbers -> first second and second first.</returns>
         public static (double, double) SwapTwoNumbers(double first, double second) => (second, first);
+
+        public static (int, int, int, int) SpecifiedOperationsResults()
+            => (-1 + 4 * 6, (35 + 5) % 7, 14 + -4 * 6 / 11, 2 + 15 / 6 * 1 - 7 % 2);
     }
 }
