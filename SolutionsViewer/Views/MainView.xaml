@@ -46,6 +46,21 @@
             <StackPanel Visibility="{Binding InputType2Visible, Converter={StaticResource BoolToVis}}">
                 <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType2Command}" />
             </StackPanel>
+            <StackPanel Visibility="{Binding InputType3Visible, Converter={StaticResource BoolToVis}}">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField1Caption}" />
+                    <TextBox Text="{Binding InputField1Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField2Caption}" />
+                    <TextBox Text="{Binding InputField2Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField3Caption}" />
+                    <TextBox Text="{Binding InputField3Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType3Command}" />
+            </StackPanel>
         </Grid>
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">
             <Label Content="{x:Static p:Literals.Output_Label}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" />

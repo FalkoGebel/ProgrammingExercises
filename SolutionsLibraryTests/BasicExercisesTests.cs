@@ -68,5 +68,42 @@ namespace SolutionsLibraryTests
             first.Should().Be(number2);
             second.Should().Be(number1);
         }
+
+        [DataTestMethod]
+        [DataRow(5, 10, 7)]
+        [DataRow(0.75, -0.01, 0)]
+        [DataRow(20, 4, -0.02)]
+        public void Exercise_06_input_three_numbers_and_return_product(double number1, double number2, double number3)
+        {
+            double expected = number1 * number2 * number3;
+
+            double result = BasicExercises.MultiplyThreeNumbers(number1, number2, number3);
+
+            result.Should().Be(expected);
+        }
+
+        [TestMethod]
+        public void Exercise_07_second_number_zero_and_throw_exception()
+        {
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                BasicExercises.ArithmeticOperations(1, 0);
+            });
+        }
+
+        [DataTestMethod]
+        [DataRow(25, 4, 29, 21, 100, 6, 1)]
+        [DataRow(2, 2, 4, 0, 4, 1, 0)]
+        [DataRow(1, 5, 6, -4, 5, 0, 1)]
+        public void Exercise_07_return_correct_results(int number1, int number2, int expected1, int expected2, int expected3, int expected4, int expected5)
+        {
+            (int result1, int result2, int result3, int result4, int result5) = BasicExercises.ArithmeticOperations(number1, number2);
+
+            result1.Should().Be(expected1);
+            result2.Should().Be(expected2);
+            result3.Should().Be(expected3);
+            result4.Should().Be(expected4);
+            result5.Should().Be(expected5);
+        }
     }
 }
