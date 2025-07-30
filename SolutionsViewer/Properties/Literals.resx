@@ -132,8 +132,20 @@
   <data name="BasicExercises_05" xml:space="preserve">
     <value>Swap Two Numbers</value>
   </data>
+  <data name="BasicExercises_06" xml:space="preserve">
+    <value>Multiply Three Numbers</value>
+  </data>
+  <data name="BasicExercises_07" xml:space="preserve">
+    <value>Arithmetic Operations</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
+  </data>
+  <data name="Error_IntegersOnly" xml:space="preserve">
+    <value>Integers only!</value>
+  </data>
+  <data name="Error_InvalidNumbers" xml:space="preserve">
+    <value>Invalid input. Please enter valid numbers.</value>
   </data>
   <data name="FieldCaption_Name" xml:space="preserve">
     <value>Name</value>
@@ -143,6 +155,9 @@
   </data>
   <data name="FieldCaption_Number2" xml:space="preserve">
     <value>Number 2</value>
+  </data>
+  <data name="FieldCaption_Number3" xml:space="preserve">
+    <value>Number 3</value>
   </data>
   <data name="MainView_Title" xml:space="preserve">
     <value>Programming Exercises Solutions Viewer</value>

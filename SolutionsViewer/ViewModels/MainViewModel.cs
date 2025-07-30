@@ -11,7 +11,9 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_02,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_03,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_04,2,[]),
-            (Properties.Literals.BasicExercises_05,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2])
+            (Properties.Literals.BasicExercises_05,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_06,3,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3]),
+            (Properties.Literals.BasicExercises_07,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2])
         ];
 
         [ObservableProperty]
@@ -48,6 +50,9 @@ namespace SolutionsViewer.ViewModels
         private bool _inputType2Visible;
 
         [ObservableProperty]
+        private bool _inputType3Visible;
+
+        [ObservableProperty]
         private string _inputField1Caption = string.Empty;
 
         [ObservableProperty]
@@ -58,6 +63,12 @@ namespace SolutionsViewer.ViewModels
 
         [ObservableProperty]
         private string _inputField2Value = string.Empty;
+
+        [ObservableProperty]
+        private string _inputField3Caption = string.Empty;
+
+        [ObservableProperty]
+        private string _inputField3Value = string.Empty;
 
         [ObservableProperty]
         private string _result = string.Empty;
@@ -76,7 +87,7 @@ namespace SolutionsViewer.ViewModels
         {
             if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
             {
-                Result = "Invalid input. Please enter valid numbers.";
+                Result = Properties.Literals.Error_InvalidNumbers;
                 return;
             }
 
@@ -92,6 +103,29 @@ namespace SolutionsViewer.ViewModels
             {
                 (double first, double second) = BasicExercises.SwapTwoNumbers(number1, number2);
                 Result = $"Number 1: {first}\nNumber 2: {second}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_07)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) || !int.TryParse(InputField2Value, out int numberInteger2))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                try
+                {
+                    (int result1, int result2, int result3, int result4, int result5) = BasicExercises.ArithmeticOperations((int)number1, (int)number2);
+
+                    Result = $"{numberInteger1} + {numberInteger2} = {result1}\n" +
+                             $"{numberInteger1} - {numberInteger2} = {result2}\n" +
+                             $"{numberInteger1} x {numberInteger2} = {result3}\n" +
+                             $"{numberInteger1} / {numberInteger2} = {result4}\n" +
+                             $"{numberInteger1} % {numberInteger2} = {result5}";
+                }
+                catch (ArgumentException ae)
+                {
+                    Result = $"{ae.Message}";
+                }
             }
         }
 
@@ -109,6 +143,23 @@ namespace SolutionsViewer.ViewModels
             }
         }
 
+        [RelayCommand]
+        private void ProcessInputType3()
+        {
+            if (!double.TryParse(InputField1Value, out double number1) ||
+                !double.TryParse(InputField2Value, out double number2) ||
+                !double.TryParse(InputField3Value, out double number3))
+            {
+                Result = Properties.Literals.Error_InvalidNumbers;
+                return;
+            }
+
+            if (SelectedTask == Properties.Literals.BasicExercises_06)
+            {
+                Result = $"{number1} x {number2} x {number3} = {BasicExercises.MultiplyThreeNumbers(number1, number2, number3)}";
+            }
+        }
+
         private void EvaluateSelectedCategory()
         {
             if (SelectedCategory == Properties.Literals.Categories_01)
@@ -123,12 +174,15 @@ namespace SolutionsViewer.ViewModels
             // 0: one string
             // 1: two numbers
             // 2: no input
+            // 3: three numbers
 
             InputType0Visible = false;
             InputType1Visible = false;
             InputType2Visible = false;
+            InputType3Visible = false;
             InputField1Value = string.Empty;
             InputField2Value = string.Empty;
+            InputField3Value = string.Empty;
 
             if (SelectedCategory == Properties.Literals.Categories_01)
             {
@@ -148,6 +202,13 @@ namespace SolutionsViewer.ViewModels
                 else if (task.Item2 == 2)
                 {
                     InputType2Visible = true;
+                }
+                else if (task.Item2 == 3)
+                {
+                    InputField1Caption = task.Item3[0];
+                    InputField2Caption = task.Item3[1];
+                    InputField3Caption = task.Item3[2];
+                    InputType3Visible = true;
                 }
             }
         }

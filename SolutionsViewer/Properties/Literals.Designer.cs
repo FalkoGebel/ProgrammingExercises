@@ -106,11 +106,47 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Multiply Three Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_06 {
+            get {
+                return ResourceManager.GetString("BasicExercises_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Arithmetic Operations ähnelt.
+        /// </summary>
+        public static string BasicExercises_07 {
+            get {
+                return ResourceManager.GetString("BasicExercises_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
             get {
                 return ResourceManager.GetString("Categories_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Integers only! ähnelt.
+        /// </summary>
+        public static string Error_IntegersOnly {
+            get {
+                return ResourceManager.GetString("Error_IntegersOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Invalid input. Please enter valid numbers. ähnelt.
+        /// </summary>
+        public static string Error_InvalidNumbers {
+            get {
+                return ResourceManager.GetString("Error_InvalidNumbers", resourceCulture);
             }
         }
         
@@ -138,6 +174,15 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Number2 {
             get {
                 return ResourceManager.GetString("FieldCaption_Number2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number 3 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number3 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number3", resourceCulture);
             }
         }
         

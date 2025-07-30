@@ -3,6 +3,8 @@
 
 
 
+
+
 namespace SolutionsLibrary
 {
     public static class BasicExercises
@@ -31,6 +33,13 @@ namespace SolutionsLibrary
         public static double DivideTwoNumbers(double dividend, double divisor) => dividend / divisor;
 
         /// <summary>
+        /// Solution for basic exercise number 4.
+        /// </summary>
+        /// <returns>The four results for the fix operations.</returns>
+        public static (int, int, int, int) SpecifiedOperationsResults()
+            => (-1 + 4 * 6, (35 + 5) % 7, 14 + -4 * 6 / 11, 2 + 15 / 6 * 1 - 7 % 2);
+
+        /// <summary>
         /// Solution for basic exercise number 5.
         /// </summary>
         /// <param name="first">First number to swap.</param>
@@ -38,7 +47,30 @@ namespace SolutionsLibrary
         /// <returns>Swapped numbers -> first second and second first.</returns>
         public static (double, double) SwapTwoNumbers(double first, double second) => (second, first);
 
-        public static (int, int, int, int) SpecifiedOperationsResults()
-            => (-1 + 4 * 6, (35 + 5) % 7, 14 + -4 * 6 / 11, 2 + 15 / 6 * 1 - 7 % 2);
+        /// <summary>
+        /// Solution for basic exercise number 6.
+        /// </summary>
+        /// <param name="factor1">First factor for multiplication.</param>
+        /// <param name="factor2">Second factor for multiplication.</param>
+        /// <param name="factor3">Third factor for multiplication.</param>
+        /// <returns>The Product for the multiplication.</returns>
+        public static double MultiplyThreeNumbers(double factor1, double factor2, double factor3) => factor1 * factor2 * factor3;
+
+        /// <summary>
+        /// Solution for basic exercise number 7.
+        /// </summary>
+        /// <param name="first">First number for operations.</param>
+        /// <param name="second">Second number for operations.</param>
+        /// <returns>The five results for the operations - addition, subtraction, multiplication, division and modulo.</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static (int result1, int result2, int result3, int result4, int result5) ArithmeticOperations(int first, int second)
+        {
+            if (second == 0)
+            {
+                throw new ArgumentException("The second number must not be zero because of the division.");
+            }
+
+            return (first + second, first - second, first * second, first / second, first % second);
+        }
     }
 }
