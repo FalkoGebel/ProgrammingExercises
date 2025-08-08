@@ -101,5 +101,20 @@ namespace SolutionsLibrary
         /// <returns>The two results for the two specified formulas of the three given numbers.</returns>
         public static (int result1, int result2) SpecifiedFormulaWithThreeNumbers(int x, int y, int z)
             => ((x + y) * z, x * y + y * z);
+
+        public static string PrintAgeMessage(int age)
+        {
+            if (age < 0 || age > 120)
+            {
+                throw new ArgumentException("Age must be between 0 and 120.");
+            }
+
+            return age switch
+            {
+                <= 25 => $"You look older than {age}.",
+                <= 70 => $"You look younger than {age}.",
+                _ => $"You are quite a good looking {age} old senior citizen."
+            };
+        }
     }
 }

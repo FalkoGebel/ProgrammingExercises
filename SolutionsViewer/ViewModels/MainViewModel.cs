@@ -16,7 +16,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_07,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_08,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_09,4,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3, Properties.Literals.FieldCaption_Number4]),
-            (Properties.Literals.BasicExercises_10,3,[Properties.Literals.FieldCaption_NumberX, Properties.Literals.FieldCaption_NumberY, Properties.Literals.FieldCaption_NumberZ])
+            (Properties.Literals.BasicExercises_10,3,[Properties.Literals.FieldCaption_NumberX, Properties.Literals.FieldCaption_NumberY, Properties.Literals.FieldCaption_NumberZ]),
+            (Properties.Literals.BasicExercises_11,0,[Properties.Literals.FieldCaption_Age])
         ];
 
         [ObservableProperty]
@@ -100,6 +101,22 @@ namespace SolutionsViewer.ViewModels
                     return;
                 }
                 Result = BasicExercises.MultiplicationTable(number);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_11)
+            {
+                if (!int.TryParse(InputField1Value, out int age))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+                try
+                {
+                    Result = BasicExercises.PrintAgeMessage(age);
+                }
+                catch (ArgumentException ae)
+                {
+                    Result = ae.Message;
+                }
             }
         }
 

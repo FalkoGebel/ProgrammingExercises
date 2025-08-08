@@ -147,6 +147,9 @@
   <data name="BasicExercises_10" xml:space="preserve">
     <value>Specified Formula with Three Numbers</value>
   </data>
+  <data name="BasicExercises_11" xml:space="preserve">
+    <value>Print Age Message</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="Error_InvalidNumbers" xml:space="preserve">
     <value>Invalid input. Please enter valid numbers.</value>
+  </data>
+  <data name="FieldCaption_Age" xml:space="preserve">
+    <value>Age</value>
   </data>
   <data name="FieldCaption_Name" xml:space="preserve">
     <value>Name</value>

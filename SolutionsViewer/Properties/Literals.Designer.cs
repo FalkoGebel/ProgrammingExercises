@@ -151,6 +151,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print Age Message ähnelt.
+        /// </summary>
+        public static string BasicExercises_11 {
+            get {
+                return ResourceManager.GetString("BasicExercises_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -174,6 +183,15 @@ namespace SolutionsViewer.Properties {
         public static string Error_InvalidNumbers {
             get {
                 return ResourceManager.GetString("Error_InvalidNumbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Age ähnelt.
+        /// </summary>
+        public static string FieldCaption_Age {
+            get {
+                return ResourceManager.GetString("FieldCaption_Age", resourceCulture);
             }
         }
         

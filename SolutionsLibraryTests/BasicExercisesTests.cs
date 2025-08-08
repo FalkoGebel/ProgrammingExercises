@@ -137,5 +137,30 @@ namespace SolutionsLibraryTests
             result1.Should().Be(expected1);
             result2.Should().Be(expected2);
         }
+
+        [DataTestMethod]
+        [DataRow(-5)]
+        [DataRow(130)]
+        [DataRow(-1)]
+        [DataRow(121)]
+        public void Exercise_11_invalid_age_and_throw_exception(int number)
+        {
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                BasicExercises.PrintAgeMessage(number);
+            });
+        }
+
+        [DataTestMethod]
+        [DataRow(0, "You look older than 0.")]
+        [DataRow(20, "You look older than 20.")]
+        [DataRow(55, "You look younger than 55.")]
+        [DataRow(91, "You are quite a good looking 91 old senior citizen.")]
+        public void Exercise_11_return_correct_result_string(int number, string expectedResult)
+        {
+            string result = BasicExercises.PrintAgeMessage(number);
+
+            result.Should().Be(expectedResult);
+        }
     }
 }
