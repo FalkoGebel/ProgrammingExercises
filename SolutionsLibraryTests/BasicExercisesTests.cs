@@ -115,5 +115,16 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expectedResult);
         }
+
+        [DataTestMethod]
+        [DataRow(10, 15, 20, 30, 18)]
+        [DataRow(17, 23, 11, 99, 37)]
+        [DataRow(17, 23, 11, -99, -12)]
+        public void Exercise_09_return_correct_result(int number1, int number2, int number3, int number4, int expected)
+        {
+            int result = BasicExercises.AverageOfFourNumbers(number1, number2, number3, number4);
+
+            result.Should().Be(expected);
+        }
     }
 }

@@ -15,8 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -60,6 +59,25 @@
                     <TextBox Text="{Binding InputField3Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
                 </StackPanel>
                 <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType3Command}" />
+            </StackPanel>
+            <StackPanel Visibility="{Binding InputType4Visible, Converter={StaticResource BoolToVis}}">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField1Caption}" />
+                    <TextBox Text="{Binding InputField1Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField2Caption}" />
+                    <TextBox Text="{Binding InputField2Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField3Caption}" />
+                    <TextBox Text="{Binding InputField3Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding InputField4Caption}" />
+                    <TextBox Text="{Binding InputField4Value, Mode=TwoWay}" MinWidth="100" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Button Content="{x:Static p:Literals.StartButton_Caption}" Command="{Binding ProcessInputType4Command}" />
             </StackPanel>
         </Grid>
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">

@@ -80,5 +80,16 @@ namespace SolutionsLibrary
         /// <returns>The multiplication table for the given number</returns>
         public static string MultiplicationTable(int number)
             => string.Join("\n", Enumerable.Range(0, 11).Select(i => $"{number} x {i} = {number * i}"));
+
+        /// <summary>
+        /// Solution for basic exercise number 9.
+        /// </summary>
+        /// <param name="first">First number for average of four.</param>
+        /// <param name="second">Second number for average of four.</param>
+        /// <param name="third">Third number for average of four.</param>
+        /// <param name="fourth">Fourth number for average of four.</param>
+        /// <returns>The average of the four given numbers.</returns>
+        public static int AverageOfFourNumbers(int first, int second, int third, int fourth)
+            => (first + second + third + fourth) / 4;
     }
 }

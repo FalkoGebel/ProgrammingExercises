@@ -133,6 +133,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Average of Four Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_09 {
+            get {
+                return ResourceManager.GetString("BasicExercises_09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -201,6 +210,15 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Number3 {
             get {
                 return ResourceManager.GetString("FieldCaption_Number3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number 4 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number4 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number4", resourceCulture);
             }
         }
         

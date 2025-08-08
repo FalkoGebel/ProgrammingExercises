@@ -14,7 +14,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_05,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_06,3,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3]),
             (Properties.Literals.BasicExercises_07,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
-            (Properties.Literals.BasicExercises_08,0,[Properties.Literals.FieldCaption_Number])
+            (Properties.Literals.BasicExercises_08,0,[Properties.Literals.FieldCaption_Number]),
+            (Properties.Literals.BasicExercises_09,4,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3, Properties.Literals.FieldCaption_Number4])
         ];
 
         [ObservableProperty]
@@ -54,6 +55,9 @@ namespace SolutionsViewer.ViewModels
         private bool _inputType3Visible;
 
         [ObservableProperty]
+        private bool _inputType4Visible;
+
+        [ObservableProperty]
         private string _inputField1Caption = string.Empty;
 
         [ObservableProperty]
@@ -70,6 +74,12 @@ namespace SolutionsViewer.ViewModels
 
         [ObservableProperty]
         private string _inputField3Value = string.Empty;
+
+        [ObservableProperty]
+        private string _inputField4Caption = string.Empty;
+
+        [ObservableProperty]
+        private string _inputField4Value = string.Empty;
 
         [ObservableProperty]
         private string _result = string.Empty;
@@ -170,6 +180,22 @@ namespace SolutionsViewer.ViewModels
             }
         }
 
+        [RelayCommand]
+        private void ProcessInputType4()
+        {
+            if (!int.TryParse(InputField1Value, out int number1) ||
+                !int.TryParse(InputField2Value, out int number2) ||
+                !int.TryParse(InputField3Value, out int number3) ||
+                !int.TryParse(InputField4Value, out int number4))
+            {
+                Result = Properties.Literals.Error_InvalidNumbers;
+                return;
+            }
+
+            if (SelectedTask == Properties.Literals.BasicExercises_09)
+                Result = $"Average of {number1}, {number2}, {number3} and {number4} = {BasicExercises.AverageOfFourNumbers(number1, number2, number3, number4)}";
+        }
+
         private void EvaluateSelectedCategory()
         {
             if (SelectedCategory == Properties.Literals.Categories_01)
@@ -185,14 +211,17 @@ namespace SolutionsViewer.ViewModels
             // 1: two fields
             // 2: no input
             // 3: three fields
+            // 4: four fields
 
             InputType0Visible = false;
             InputType1Visible = false;
             InputType2Visible = false;
             InputType3Visible = false;
+            InputType4Visible = false;
             InputField1Value = string.Empty;
             InputField2Value = string.Empty;
             InputField3Value = string.Empty;
+            InputField4Value = string.Empty;
 
             if (SelectedCategory == Properties.Literals.Categories_01)
             {
@@ -219,6 +248,14 @@ namespace SolutionsViewer.ViewModels
                     InputField2Caption = task.Item3[1];
                     InputField3Caption = task.Item3[2];
                     InputType3Visible = true;
+                }
+                else if (task.Item2 == 4)
+                {
+                    InputField1Caption = task.Item3[0];
+                    InputField2Caption = task.Item3[1];
+                    InputField3Caption = task.Item3[2];
+                    InputField4Caption = task.Item3[3];
+                    InputType4Visible = true;
                 }
             }
         }
