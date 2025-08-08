@@ -124,6 +124,51 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Multiplication Table ähnelt.
+        /// </summary>
+        public static string BasicExercises_08 {
+            get {
+                return ResourceManager.GetString("BasicExercises_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Average of Four Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_09 {
+            get {
+                return ResourceManager.GetString("BasicExercises_09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Specified Formula with Three Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_10 {
+            get {
+                return ResourceManager.GetString("BasicExercises_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print Age Message ähnelt.
+        /// </summary>
+        public static string BasicExercises_11 {
+            get {
+                return ResourceManager.GetString("BasicExercises_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Repeat Number in Rows ähnelt.
+        /// </summary>
+        public static string BasicExercises_12 {
+            get {
+                return ResourceManager.GetString("BasicExercises_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -151,11 +196,29 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Age ähnelt.
+        /// </summary>
+        public static string FieldCaption_Age {
+            get {
+                return ResourceManager.GetString("FieldCaption_Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Name ähnelt.
         /// </summary>
         public static string FieldCaption_Name {
             get {
                 return ResourceManager.GetString("FieldCaption_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number", resourceCulture);
             }
         }
         
@@ -183,6 +246,42 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Number3 {
             get {
                 return ResourceManager.GetString("FieldCaption_Number3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number 4 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number4 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die x ähnelt.
+        /// </summary>
+        public static string FieldCaption_NumberX {
+            get {
+                return ResourceManager.GetString("FieldCaption_NumberX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die y ähnelt.
+        /// </summary>
+        public static string FieldCaption_NumberY {
+            get {
+                return ResourceManager.GetString("FieldCaption_NumberY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die z ähnelt.
+        /// </summary>
+        public static string FieldCaption_NumberZ {
+            get {
+                return ResourceManager.GetString("FieldCaption_NumberZ", resourceCulture);
             }
         }
         

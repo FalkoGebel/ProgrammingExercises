@@ -138,6 +138,21 @@
   <data name="BasicExercises_07" xml:space="preserve">
     <value>Arithmetic Operations</value>
   </data>
+  <data name="BasicExercises_08" xml:space="preserve">
+    <value>Multiplication Table</value>
+  </data>
+  <data name="BasicExercises_09" xml:space="preserve">
+    <value>Average of Four Numbers</value>
+  </data>
+  <data name="BasicExercises_10" xml:space="preserve">
+    <value>Specified Formula with Three Numbers</value>
+  </data>
+  <data name="BasicExercises_11" xml:space="preserve">
+    <value>Print Age Message</value>
+  </data>
+  <data name="BasicExercises_12" xml:space="preserve">
+    <value>Repeat Number in Rows</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
@@ -147,8 +162,14 @@
   <data name="Error_InvalidNumbers" xml:space="preserve">
     <value>Invalid input. Please enter valid numbers.</value>
   </data>
+  <data name="FieldCaption_Age" xml:space="preserve">
+    <value>Age</value>
+  </data>
   <data name="FieldCaption_Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="FieldCaption_Number" xml:space="preserve">
+    <value>Number</value>
   </data>
   <data name="FieldCaption_Number1" xml:space="preserve">
     <value>Number 1</value>
@@ -158,6 +179,18 @@
   </data>
   <data name="FieldCaption_Number3" xml:space="preserve">
     <value>Number 3</value>
+  </data>
+  <data name="FieldCaption_Number4" xml:space="preserve">
+    <value>Number 4</value>
+  </data>
+  <data name="FieldCaption_NumberX" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="FieldCaption_NumberY" xml:space="preserve">
+    <value>y</value>
+  </data>
+  <data name="FieldCaption_NumberZ" xml:space="preserve">
+    <value>z</value>
   </data>
   <data name="MainView_Title" xml:space="preserve">
     <value>Programming Exercises Solutions Viewer</value>

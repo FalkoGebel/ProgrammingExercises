@@ -72,5 +72,64 @@ namespace SolutionsLibrary
 
             return (first + second, first - second, first * second, first / second, first % second);
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 8.
+        /// </summary>
+        /// <param name="number">The number to return the multiplication table for.</param>
+        /// <returns>The multiplication table for the given number</returns>
+        public static string MultiplicationTable(int number)
+            => string.Join("\n", Enumerable.Range(0, 11).Select(i => $"{number} x {i} = {number * i}"));
+
+        /// <summary>
+        /// Solution for basic exercise number 9.
+        /// </summary>
+        /// <param name="first">First number for average of four.</param>
+        /// <param name="second">Second number for average of four.</param>
+        /// <param name="third">Third number for average of four.</param>
+        /// <param name="fourth">Fourth number for average of four.</param>
+        /// <returns>The average of the four given numbers.</returns>
+        public static int AverageOfFourNumbers(int first, int second, int third, int fourth)
+            => (first + second + third + fourth) / 4;
+
+        /// <summary>
+        /// Solution for basic exercise number 10.
+        /// </summary>
+        /// <param name="x">First number for the specified formulas.</param>
+        /// <param name="y">Second number for the specified formulas.</param>
+        /// <param name="z">Third number for the specified formulas.</param>
+        /// <returns>The two results for the two specified formulas of the three given numbers.</returns>
+        public static (int result1, int result2) SpecifiedFormulaWithThreeNumbers(int x, int y, int z)
+            => ((x + y) * z, x * y + y * z);
+
+        /// <summary>
+        /// Solution for basic exercise number 11.
+        /// </summary>
+        /// <param name="age">The age to printe the message for.</param>
+        /// <returns>The message according to the given age.</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static string PrintAgeMessage(int age)
+        {
+            if (age < 0 || age > 120)
+            {
+                throw new ArgumentException("Age must be between 0 and 120.");
+            }
+
+            return age switch
+            {
+                <= 25 => $"You look older than {age}.",
+                <= 70 => $"You look younger than {age}.",
+                _ => $"You are quite a good looking {age} old senior citizen."
+            };
+        }
+
+        /// <summary>
+        /// Solution for basic exercise number 12.
+        /// </summary>
+        /// <param name="number">The number to print repeatedly.</param>
+        /// <returns>The printout.</returns>
+        public static string RepeatNumberInRows(int number)
+            => $"{number} {number} {number} {number}\n{number}{number}{number}{number}\n" +
+               $"{number} {number} {number} {number}\n{number}{number}{number}{number}";
     }
 }
