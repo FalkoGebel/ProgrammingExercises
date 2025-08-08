@@ -105,5 +105,15 @@ namespace SolutionsLibraryTests
             result4.Should().Be(expected4);
             result5.Should().Be(expected5);
         }
+
+        [DataTestMethod]
+        [DataRow(0, "0 x 0 = 0\n0 x 1 = 0\n0 x 2 = 0\n0 x 3 = 0\n0 x 4 = 0\n0 x 5 = 0\n0 x 6 = 0\n0 x 7 = 0\n0 x 8 = 0\n0 x 9 = 0\n0 x 10 = 0")]
+        [DataRow(5, "5 x 0 = 0\n5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n5 x 6 = 30\n5 x 7 = 35\n5 x 8 = 40\n5 x 9 = 45\n5 x 10 = 50")]
+        public void Exercise_08_return_correct_result_string(int number, string expectedResult)
+        {
+            string result = BasicExercises.MultiplicationTable(number);
+
+            result.Should().Be(expectedResult);
+        }
     }
 }

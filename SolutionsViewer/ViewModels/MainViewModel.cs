@@ -13,7 +13,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_04,2,[]),
             (Properties.Literals.BasicExercises_05,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_06,3,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3]),
-            (Properties.Literals.BasicExercises_07,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2])
+            (Properties.Literals.BasicExercises_07,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_08,0,[Properties.Literals.FieldCaption_Number])
         ];
 
         [ObservableProperty]
@@ -79,6 +80,15 @@ namespace SolutionsViewer.ViewModels
             if (SelectedTask == Properties.Literals.BasicExercises_01)
             {
                 Result = BasicExercises.GetHelloAndName(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_08)
+            {
+                if (!int.TryParse(InputField1Value, out int number))
+                {
+                    Result = Properties.Literals.Error_InvalidNumbers;
+                    return;
+                }
+                Result = BasicExercises.MultiplicationTable(number);
             }
         }
 
@@ -171,10 +181,10 @@ namespace SolutionsViewer.ViewModels
         private void EvaluateSelectedTask()
         {
             // Input types
-            // 0: one string
-            // 1: two numbers
+            // 0: one field
+            // 1: two fields
             // 2: no input
-            // 3: three numbers
+            // 3: three fields
 
             InputType0Visible = false;
             InputType1Visible = false;

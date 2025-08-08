@@ -124,6 +124,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Multiplication Table ähnelt.
+        /// </summary>
+        public static string BasicExercises_08 {
+            get {
+                return ResourceManager.GetString("BasicExercises_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -156,6 +165,15 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Name {
             get {
                 return ResourceManager.GetString("FieldCaption_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number ähnelt.
+        /// </summary>
+        public static string FieldCaption_Number {
+            get {
+                return ResourceManager.GetString("FieldCaption_Number", resourceCulture);
             }
         }
         

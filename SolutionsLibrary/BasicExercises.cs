@@ -72,5 +72,13 @@ namespace SolutionsLibrary
 
             return (first + second, first - second, first * second, first / second, first % second);
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 8.
+        /// </summary>
+        /// <param name="number">The number to return the multiplication table for.</param>
+        /// <returns>The multiplication table for the given number</returns>
+        public static string MultiplicationTable(int number)
+            => string.Join("\n", Enumerable.Range(0, 11).Select(i => $"{number} x {i} = {number * i}"));
     }
 }
