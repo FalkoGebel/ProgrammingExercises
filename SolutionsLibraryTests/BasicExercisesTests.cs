@@ -126,5 +126,16 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(5, 6, 7, 77, 72)]
+        [DataRow(17, 23, 11, 440, 644)]
+        public void Exercise_10_return_correct_results(int number1, int number2, int number3, int expected1, int expected2)
+        {
+            (int result1, int result2) = BasicExercises.SpecifiedFormulaWithThreeNumbers(number1, number2, number3);
+
+            result1.Should().Be(expected1);
+            result2.Should().Be(expected2);
+        }
     }
 }

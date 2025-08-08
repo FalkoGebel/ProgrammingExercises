@@ -142,6 +142,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Specified Formula with Three Numbers ähnelt.
+        /// </summary>
+        public static string BasicExercises_10 {
+            get {
+                return ResourceManager.GetString("BasicExercises_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -219,6 +228,33 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Number4 {
             get {
                 return ResourceManager.GetString("FieldCaption_Number4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die x ähnelt.
+        /// </summary>
+        public static string FieldCaption_NumberX {
+            get {
+                return ResourceManager.GetString("FieldCaption_NumberX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die y ähnelt.
+        /// </summary>
+        public static string FieldCaption_NumberY {
+            get {
+                return ResourceManager.GetString("FieldCaption_NumberY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die z ähnelt.
+        /// </summary>
+        public static string FieldCaption_NumberZ {
+            get {
+                return ResourceManager.GetString("FieldCaption_NumberZ", resourceCulture);
             }
         }
         

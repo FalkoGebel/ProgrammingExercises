@@ -15,7 +15,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_06,3,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3]),
             (Properties.Literals.BasicExercises_07,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_08,0,[Properties.Literals.FieldCaption_Number]),
-            (Properties.Literals.BasicExercises_09,4,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3, Properties.Literals.FieldCaption_Number4])
+            (Properties.Literals.BasicExercises_09,4,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3, Properties.Literals.FieldCaption_Number4]),
+            (Properties.Literals.BasicExercises_10,3,[Properties.Literals.FieldCaption_NumberX, Properties.Literals.FieldCaption_NumberY, Properties.Literals.FieldCaption_NumberZ])
         ];
 
         [ObservableProperty]
@@ -177,6 +178,18 @@ namespace SolutionsViewer.ViewModels
             if (SelectedTask == Properties.Literals.BasicExercises_06)
             {
                 Result = $"{number1} x {number2} x {number3} = {BasicExercises.MultiplyThreeNumbers(number1, number2, number3)}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_10)
+            {
+                if (!int.TryParse(InputField1Value, out int x) ||
+                    !int.TryParse(InputField2Value, out int y) ||
+                    !int.TryParse(InputField3Value, out int z))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+                (int result1, int result2) = BasicExercises.SpecifiedFormulaWithThreeNumbers(x, y, z);
+                Result = $"({x} + {y}) * {z} = {result1}\n{x} * {y} + {y} * {z} = {result2}";
             }
         }
 

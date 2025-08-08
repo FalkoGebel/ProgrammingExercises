@@ -144,6 +144,9 @@
   <data name="BasicExercises_09" xml:space="preserve">
     <value>Average of Four Numbers</value>
   </data>
+  <data name="BasicExercises_10" xml:space="preserve">
+    <value>Specified Formula with Three Numbers</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
@@ -170,6 +173,15 @@
   </data>
   <data name="FieldCaption_Number4" xml:space="preserve">
     <value>Number 4</value>
+  </data>
+  <data name="FieldCaption_NumberX" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="FieldCaption_NumberY" xml:space="preserve">
+    <value>y</value>
+  </data>
+  <data name="FieldCaption_NumberZ" xml:space="preserve">
+    <value>z</value>
   </data>
   <data name="MainView_Title" xml:space="preserve">
     <value>Programming Exercises Solutions Viewer</value>

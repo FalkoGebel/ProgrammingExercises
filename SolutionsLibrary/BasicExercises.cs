@@ -91,5 +91,15 @@ namespace SolutionsLibrary
         /// <returns>The average of the four given numbers.</returns>
         public static int AverageOfFourNumbers(int first, int second, int third, int fourth)
             => (first + second + third + fourth) / 4;
+
+        /// <summary>
+        /// Solution for basic exercise number 10.
+        /// </summary>
+        /// <param name="x">First number for the specified formulas.</param>
+        /// <param name="y">Second number for the specified formulas.</param>
+        /// <param name="z">Third number for the specified formulas.</param>
+        /// <returns>The two results for the two specified formulas of the three given numbers.</returns>
+        public static (int result1, int result2) SpecifiedFormulaWithThreeNumbers(int x, int y, int z)
+            => ((x + y) * z, x * y + y * z);
     }
 }
