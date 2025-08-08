@@ -160,6 +160,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Repeat Number in Rows ähnelt.
+        /// </summary>
+        public static string BasicExercises_12 {
+            get {
+                return ResourceManager.GetString("BasicExercises_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

@@ -150,6 +150,9 @@
   <data name="BasicExercises_11" xml:space="preserve">
     <value>Print Age Message</value>
   </data>
+  <data name="BasicExercises_12" xml:space="preserve">
+    <value>Repeat Number in Rows</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

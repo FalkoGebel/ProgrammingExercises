@@ -162,5 +162,14 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expectedResult);
         }
+
+        [DataTestMethod]
+        [DataRow(25, "25 25 25 25\n25252525\n25 25 25 25\n25252525")]
+        public void Exercise_12_return_correct_result_string(int number, string expectedResult)
+        {
+            string result = BasicExercises.RepeatNumberInRows(number);
+
+            result.Should().Be(expectedResult);
+        }
     }
 }

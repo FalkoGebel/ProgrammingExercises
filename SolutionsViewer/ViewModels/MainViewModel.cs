@@ -17,7 +17,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_08,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_09,4,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3, Properties.Literals.FieldCaption_Number4]),
             (Properties.Literals.BasicExercises_10,3,[Properties.Literals.FieldCaption_NumberX, Properties.Literals.FieldCaption_NumberY, Properties.Literals.FieldCaption_NumberZ]),
-            (Properties.Literals.BasicExercises_11,0,[Properties.Literals.FieldCaption_Age])
+            (Properties.Literals.BasicExercises_11,0,[Properties.Literals.FieldCaption_Age]),
+            (Properties.Literals.BasicExercises_12,0,[Properties.Literals.FieldCaption_Number])
         ];
 
         [ObservableProperty]
@@ -117,6 +118,15 @@ namespace SolutionsViewer.ViewModels
                 {
                     Result = ae.Message;
                 }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_12)
+            {
+                if (!int.TryParse(InputField1Value, out int number))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+                Result = BasicExercises.RepeatNumberInRows(number);
             }
         }
 

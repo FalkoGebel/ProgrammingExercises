@@ -102,6 +102,12 @@ namespace SolutionsLibrary
         public static (int result1, int result2) SpecifiedFormulaWithThreeNumbers(int x, int y, int z)
             => ((x + y) * z, x * y + y * z);
 
+        /// <summary>
+        /// Solution for basic exercise number 11.
+        /// </summary>
+        /// <param name="age">The age to printe the message for.</param>
+        /// <returns>The message according to the given age.</returns>
+        /// <exception cref="ArgumentException"></exception>
         public static string PrintAgeMessage(int age)
         {
             if (age < 0 || age > 120)
@@ -116,5 +122,14 @@ namespace SolutionsLibrary
                 _ => $"You are quite a good looking {age} old senior citizen."
             };
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 12.
+        /// </summary>
+        /// <param name="number">The number to print repeatedly.</param>
+        /// <returns>The printout.</returns>
+        public static string RepeatNumberInRows(int number)
+            => $"{number} {number} {number} {number}\n{number}{number}{number}{number}\n" +
+               $"{number} {number} {number} {number}\n{number}{number}{number}{number}";
     }
 }
