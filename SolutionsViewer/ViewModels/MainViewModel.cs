@@ -19,7 +19,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_10,3,[Properties.Literals.FieldCaption_NumberX, Properties.Literals.FieldCaption_NumberY, Properties.Literals.FieldCaption_NumberZ]),
             (Properties.Literals.BasicExercises_11,0,[Properties.Literals.FieldCaption_Age]),
             (Properties.Literals.BasicExercises_12,0,[Properties.Literals.FieldCaption_Number]),
-            (Properties.Literals.BasicExercises_13,0,[Properties.Literals.FieldCaption_Number])
+            (Properties.Literals.BasicExercises_13,0,[Properties.Literals.FieldCaption_Number]),
+            (Properties.Literals.BasicExercises_14,0,[Properties.Literals.FieldCaption_Celsius])
         ];
 
         [ObservableProperty]
@@ -137,6 +138,16 @@ namespace SolutionsViewer.ViewModels
                     return;
                 }
                 Result = BasicExercises.RectanglePatternWithNumber(number);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_14)
+            {
+                if (!int.TryParse(InputField1Value, out int celsius))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+                (int kelvin, int fahrenheit) = BasicExercises.CelsiusToKelvinAndFahrenheit(celsius);
+                Result = $"{celsius}° Celsius corresponds to {kelvin}° Kelvin and {fahrenheit}° Fahrenheit.";
             }
         }
 

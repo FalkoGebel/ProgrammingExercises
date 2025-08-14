@@ -182,5 +182,16 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expectedResult);
         }
+
+        [DataTestMethod]
+        [DataRow(30, 303, 86)]
+        [DataRow(48, 321, 118)]
+        public void Exercise_14_return_correct_results(int celsius, int kelvinExpected, int fahrenheitExpected)
+        {
+            (int kelvin, int fahrenheit) = BasicExercises.CelsiusToKelvinAndFahrenheit(celsius);
+
+            kelvin.Should().Be(kelvinExpected);
+            fahrenheit.Should().Be(fahrenheitExpected);
+        }
     }
 }

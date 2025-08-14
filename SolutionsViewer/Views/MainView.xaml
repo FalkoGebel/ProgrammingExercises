@@ -82,7 +82,7 @@
         </Grid>
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">
             <Label Content="{x:Static p:Literals.Output_Label}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" />
-            <TextBlock Text="{Binding Result}" Margin="10,10,10,10" FontFamily="Consolas" FontSize="13"/>
+            <TextBlock Text="{Binding Result}" Margin="10,10,10,10" FontFamily="Consolas" FontSize="13" TextWrapping="Wrap"/>
         </StackPanel>
     </Grid>
 </Window>

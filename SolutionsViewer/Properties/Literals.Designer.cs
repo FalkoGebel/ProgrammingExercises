@@ -178,6 +178,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Celsius to Kelvin and Fahrenheit ähnelt.
+        /// </summary>
+        public static string BasicExercises_14 {
+            get {
+                return ResourceManager.GetString("BasicExercises_14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -210,6 +219,15 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Age {
             get {
                 return ResourceManager.GetString("FieldCaption_Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ° Celsius ähnelt.
+        /// </summary>
+        public static string FieldCaption_Celsius {
+            get {
+                return ResourceManager.GetString("FieldCaption_Celsius", resourceCulture);
             }
         }
         

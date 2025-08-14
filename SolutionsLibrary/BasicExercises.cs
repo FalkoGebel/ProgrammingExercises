@@ -132,6 +132,11 @@ namespace SolutionsLibrary
             => $"{number} {number} {number} {number}\n{number}{number}{number}{number}\n" +
                $"{number} {number} {number} {number}\n{number}{number}{number}{number}";
 
+        /// <summary>
+        /// Solution for basic exercise number 13.
+        /// </summary>
+        /// <param name="number">The number to print the pattern for.</param>
+        /// <returns>The pattern printout.</returns>
         public static string RectanglePatternWithNumber(int number)
         {
             return $"{number}{number}{number}\n" +
@@ -140,5 +145,13 @@ namespace SolutionsLibrary
                    $"{number}{new string(' ', number.ToString().Length)}{number}\n" +
                    $"{number}{number}{number}";
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 14.
+        /// </summary>
+        /// <param name="celsius">Temperature in degrees Celsius.</param>
+        /// <returns>Temperature in degrees Kelvin and degrees Fahrenheit.</returns>
+        public static (int kelvin, int fahrenheit) CelsiusToKelvinAndFahrenheit(int celsius)
+            => (celsius + 273, (int)(celsius * 9.0 / 5.0 + 32));
     }
 }
