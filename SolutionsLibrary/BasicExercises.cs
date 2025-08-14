@@ -131,5 +131,14 @@ namespace SolutionsLibrary
         public static string RepeatNumberInRows(int number)
             => $"{number} {number} {number} {number}\n{number}{number}{number}{number}\n" +
                $"{number} {number} {number} {number}\n{number}{number}{number}{number}";
+
+        public static string RectanglePatternWithNumber(int number)
+        {
+            return $"{number}{number}{number}\n" +
+                   $"{number}{new string(' ', number.ToString().Length)}{number}\n" +
+                   $"{number}{new string(' ', number.ToString().Length)}{number}\n" +
+                   $"{number}{new string(' ', number.ToString().Length)}{number}\n" +
+                   $"{number}{number}{number}";
+        }
     }
 }

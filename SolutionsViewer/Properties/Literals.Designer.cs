@@ -169,6 +169,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Rectangle Pattern with Number ähnelt.
+        /// </summary>
+        public static string BasicExercises_13 {
+            get {
+                return ResourceManager.GetString("BasicExercises_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

@@ -153,6 +153,9 @@
   <data name="BasicExercises_12" xml:space="preserve">
     <value>Repeat Number in Rows</value>
   </data>
+  <data name="BasicExercises_13" xml:space="preserve">
+    <value>Rectangle Pattern with Number</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

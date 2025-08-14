@@ -171,5 +171,16 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expectedResult);
         }
+
+        [DataTestMethod]
+        [DataRow(5, "555\n5 5\n5 5\n5 5\n555")]
+        [DataRow(11, "111111\n11  11\n11  11\n11  11\n111111")]
+        [DataRow(999, "999999999\n999   999\n999   999\n999   999\n999999999")]
+        public void Exercise_13_return_correct_result_string(int number, string expectedResult)
+        {
+            string result = BasicExercises.RectanglePatternWithNumber(number);
+
+            result.Should().Be(expectedResult);
+        }
     }
 }
