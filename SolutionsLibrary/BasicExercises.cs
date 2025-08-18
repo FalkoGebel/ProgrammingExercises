@@ -153,5 +153,23 @@ namespace SolutionsLibrary
         /// <returns>Temperature in degrees Kelvin and degrees Fahrenheit.</returns>
         public static (int kelvin, int fahrenheit) CelsiusToKelvinAndFahrenheit(int celsius)
             => (celsius + 273, (int)(celsius * 9.0 / 5.0 + 32));
+
+        /// <summary>
+        /// Solution for basic exercise number 15.
+        /// </summary>
+        /// <param name="input">Input string to take the character from.</param>
+        /// <param name="index">Index of the character to take from the input string.</param>
+        /// <returns>Input string without the removed character.</returns>
+        /// <exception cref="ArgumentException">Empty input string or index out of input string bounds.</exception>
+        public static string RemoveCharacterByIndex(string input, int index)
+        {
+            if (input == string.Empty)
+                throw new ArgumentException("Input string must not be empty.");
+
+            if (index < 0 || index >= input.Length)
+                throw new ArgumentException("Index must be within the bounds of the input string.");
+
+            return $"{input[..index]}{input[(index + 1)..]}";
+        }
     }
 }

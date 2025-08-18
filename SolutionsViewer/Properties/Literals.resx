@@ -159,11 +159,17 @@
   <data name="BasicExercises_14" xml:space="preserve">
     <value>Celsius to Kelvin and Fahrenheit</value>
   </data>
+  <data name="BasicExercises_15" xml:space="preserve">
+    <value>Remove Character by Index</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
   <data name="Error_IntegersOnly" xml:space="preserve">
     <value>Integers only!</value>
+  </data>
+  <data name="Error_InvalidIndex" xml:space="preserve">
+    <value>Invalid Index.</value>
   </data>
   <data name="Error_InvalidNumbers" xml:space="preserve">
     <value>Invalid input. Please enter valid numbers.</value>
@@ -173,6 +179,12 @@
   </data>
   <data name="FieldCaption_Celsius" xml:space="preserve">
     <value>° Celsius</value>
+  </data>
+  <data name="FieldCaption_Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="FieldCaption_InputString" xml:space="preserve">
+    <value>Input String</value>
   </data>
   <data name="FieldCaption_Name" xml:space="preserve">
     <value>Name</value>

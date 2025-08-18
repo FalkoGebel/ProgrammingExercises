@@ -193,5 +193,28 @@ namespace SolutionsLibraryTests
             kelvin.Should().Be(kelvinExpected);
             fahrenheit.Should().Be(fahrenheitExpected);
         }
+
+        [DataTestMethod]
+        [DataRow("", 1)]
+        [DataRow("w3resource", 10)]
+        [DataRow("w3resource", -1)]
+        public void Exercise_15_invalid_parameters_and_exception(string input, int index)
+        {
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                BasicExercises.RemoveCharacterByIndex(input, index);
+            });
+        }
+
+        [DataTestMethod]
+        [DataRow("w3resource", 1, "wresource")]
+        [DataRow("w3resource", 9, "w3resourc")]
+        [DataRow("w3resource", 0, "3resource")]
+        public void Exercise_15_return_correct_result(string input, int index, string expected)
+        {
+            string result = BasicExercises.RemoveCharacterByIndex(input, index);
+
+            result.Should().Be(expected);
+        }
     }
 }

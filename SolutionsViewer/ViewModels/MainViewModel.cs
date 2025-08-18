@@ -20,7 +20,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_11,0,[Properties.Literals.FieldCaption_Age]),
             (Properties.Literals.BasicExercises_12,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_13,0,[Properties.Literals.FieldCaption_Number]),
-            (Properties.Literals.BasicExercises_14,0,[Properties.Literals.FieldCaption_Celsius])
+            (Properties.Literals.BasicExercises_14,0,[Properties.Literals.FieldCaption_Celsius]),
+            (Properties.Literals.BasicExercises_15,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Index])
         ];
 
         [ObservableProperty]
@@ -154,22 +155,34 @@ namespace SolutionsViewer.ViewModels
         [RelayCommand]
         private void ProcessInputType1()
         {
-            if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
-            {
-                Result = Properties.Literals.Error_InvalidNumbers;
-                return;
-            }
-
             if (SelectedTask == Properties.Literals.BasicExercises_02)
             {
+                if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
+                {
+                    Result = Properties.Literals.Error_InvalidNumbers;
+                    return;
+                }
+
                 Result = $"{number1} {(number2 >= 0 ? '+' : '-')} {Math.Abs(number2)} = {BasicExercises.SumOfTwoNumbers(number1, number2)}";
             }
             else if (SelectedTask == Properties.Literals.BasicExercises_03)
             {
+                if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
+                {
+                    Result = Properties.Literals.Error_InvalidNumbers;
+                    return;
+                }
+
                 Result = $"{number1} / {number2} = {BasicExercises.DivideTwoNumbers(number1, number2)}";
             }
             else if (SelectedTask == Properties.Literals.BasicExercises_05)
             {
+                if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
+                {
+                    Result = Properties.Literals.Error_InvalidNumbers;
+                    return;
+                }
+
                 (double first, double second) = BasicExercises.SwapTwoNumbers(number1, number2);
                 Result = $"Number 1: {first}\nNumber 2: {second}";
             }
@@ -183,13 +196,30 @@ namespace SolutionsViewer.ViewModels
 
                 try
                 {
-                    (int result1, int result2, int result3, int result4, int result5) = BasicExercises.ArithmeticOperations((int)number1, (int)number2);
+                    (int result1, int result2, int result3, int result4, int result5) = BasicExercises.ArithmeticOperations((int)numberInteger1, (int)numberInteger2);
 
                     Result = $"{numberInteger1} + {numberInteger2} = {result1}\n" +
                              $"{numberInteger1} - {numberInteger2} = {result2}\n" +
                              $"{numberInteger1} x {numberInteger2} = {result3}\n" +
                              $"{numberInteger1} / {numberInteger2} = {result4}\n" +
                              $"{numberInteger1} % {numberInteger2} = {result5}";
+                }
+                catch (ArgumentException ae)
+                {
+                    Result = $"{ae.Message}";
+                }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_15)
+            {
+                if (!int.TryParse(InputField2Value, out int index))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidIndex} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                try
+                {
+                    Result = BasicExercises.RemoveCharacterByIndex(InputField1Value, index);
                 }
                 catch (ArgumentException ae)
                 {
