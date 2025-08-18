@@ -187,6 +187,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Remove Character by Index ähnelt.
+        /// </summary>
+        public static string BasicExercises_15 {
+            get {
+                return ResourceManager.GetString("BasicExercises_15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -201,6 +210,15 @@ namespace SolutionsViewer.Properties {
         public static string Error_IntegersOnly {
             get {
                 return ResourceManager.GetString("Error_IntegersOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Invalid Index. ähnelt.
+        /// </summary>
+        public static string Error_InvalidIndex {
+            get {
+                return ResourceManager.GetString("Error_InvalidIndex", resourceCulture);
             }
         }
         
@@ -228,6 +246,24 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Celsius {
             get {
                 return ResourceManager.GetString("FieldCaption_Celsius", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Index ähnelt.
+        /// </summary>
+        public static string FieldCaption_Index {
+            get {
+                return ResourceManager.GetString("FieldCaption_Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Input String ähnelt.
+        /// </summary>
+        public static string FieldCaption_InputString {
+            get {
+                return ResourceManager.GetString("FieldCaption_InputString", resourceCulture);
             }
         }
         
