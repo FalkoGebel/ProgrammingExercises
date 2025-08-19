@@ -171,5 +171,18 @@ namespace SolutionsLibrary
 
             return $"{input[..index]}{input[(index + 1)..]}";
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 16.
+        /// </summary>
+        /// <param name="input">Input string to swap first and last character for.</param>
+        /// <returns>Input string with first and last character swapped.</returns>
+        public static string SwapFirstAndLastCharacters(string input)
+        {
+            if (string.IsNullOrEmpty(input) || input.Length == 1)
+                return input;
+
+            return $"{input[^1]}{input[1..^1]}{input[0]}";
+        }
     }
 }

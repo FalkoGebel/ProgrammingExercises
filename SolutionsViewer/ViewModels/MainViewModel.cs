@@ -21,7 +21,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_12,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_13,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_14,0,[Properties.Literals.FieldCaption_Celsius]),
-            (Properties.Literals.BasicExercises_15,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Index])
+            (Properties.Literals.BasicExercises_15,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Index]),
+            (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString])
         ];
 
         [ObservableProperty]
@@ -149,6 +150,10 @@ namespace SolutionsViewer.ViewModels
                 }
                 (int kelvin, int fahrenheit) = BasicExercises.CelsiusToKelvinAndFahrenheit(celsius);
                 Result = $"{celsius}° Celsius corresponds to {kelvin}° Kelvin and {fahrenheit}° Fahrenheit.";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_16)
+            {
+                Result = BasicExercises.SwapFirstAndLastCharacters(InputField1Value);
             }
         }
 

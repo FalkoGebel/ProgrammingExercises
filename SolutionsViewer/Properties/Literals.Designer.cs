@@ -196,6 +196,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Swap First and Last Characters ähnelt.
+        /// </summary>
+        public static string BasicExercises_16 {
+            get {
+                return ResourceManager.GetString("BasicExercises_16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

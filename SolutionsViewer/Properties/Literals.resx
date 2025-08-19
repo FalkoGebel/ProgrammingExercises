@@ -162,6 +162,9 @@
   <data name="BasicExercises_15" xml:space="preserve">
     <value>Remove Character by Index</value>
   </data>
+  <data name="BasicExercises_16" xml:space="preserve">
+    <value>Swap First and Last Characters</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

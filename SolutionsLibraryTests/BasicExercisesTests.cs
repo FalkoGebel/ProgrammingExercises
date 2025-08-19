@@ -216,5 +216,18 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("w3resource", "e3resourcw")]
+        [DataRow("", "")]
+        [DataRow("w", "w")]
+        [DataRow("ab", "ba")]
+        [DataRow("abc", "cba")]
+        public void Exercise_16_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.SwapFirstAndLastCharacters(input);
+
+            result.Should().Be(expected);
+        }
     }
 }
