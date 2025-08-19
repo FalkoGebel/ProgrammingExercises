@@ -13,8 +13,8 @@
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="250"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -22,7 +22,18 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <ComboBox Grid.Row="0" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" />
-        <ListView Grid.Row="1" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}"/>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="{x:Static p:Literals.PreviousButton_Caption}"  Command="{Binding PreviousPageCommand}" />
+                <Label Content="{Binding CurrentPageInfoText}" />
+                <Button Content="{x:Static p:Literals.NextButton_Caption}" Command="{Binding NextPageCommand}" />
+            </StackPanel>
+            <ListView Grid.Row="1" ItemsSource="{Binding TasksCurrentPage}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}"/>
+        </Grid>
         <Grid Grid.Row="2">
             <StackPanel Visibility="{Binding InputType0Visible, Converter={StaticResource BoolToVis}}">
                 <StackPanel Orientation="Horizontal">
