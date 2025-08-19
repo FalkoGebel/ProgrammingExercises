@@ -6,6 +6,7 @@ namespace SolutionsViewer.ViewModels
 {
     public partial class MainViewModel : ObservableObject
     {
+        private readonly int tasksPerPage = 10;
         private readonly List<(string, int, string[])> _tasksBasicExercises = [
             (Properties.Literals.BasicExercises_01,0,[Properties.Literals.FieldCaption_Name]),
             (Properties.Literals.BasicExercises_02,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
@@ -25,6 +26,9 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString])
         ];
 
+        private int currentPage;
+        private List<string> _tasks = [];
+
         [ObservableProperty]
         private string _selectedCategory = string.Empty;
 
@@ -38,10 +42,13 @@ namespace SolutionsViewer.ViewModels
         private List<string> _categories = [Properties.Literals.Categories_01];
 
         [ObservableProperty]
-        private string _selectedTask = string.Empty;
+        private string _currentPageInfoText = string.Empty;
 
         [ObservableProperty]
-        private List<string> _tasks = [];
+        private List<string> _tasksCurrentPage = [];
+
+        [ObservableProperty]
+        private string _selectedTask = string.Empty;
 
         partial void OnSelectedTaskChanged(string? oldValue, string newValue)
         {
@@ -90,6 +97,20 @@ namespace SolutionsViewer.ViewModels
 
         [ObservableProperty]
         private string _result = string.Empty;
+
+        [RelayCommand]
+        private void PreviousPage()
+        {
+            currentPage--;
+            UpdateTasksForCurrentPage();
+        }
+
+        [RelayCommand]
+        private void NextPage()
+        {
+            currentPage++;
+            UpdateTasksForCurrentPage();
+        }
 
         [RelayCommand]
         private void ProcessInputType0()
@@ -295,9 +316,35 @@ namespace SolutionsViewer.ViewModels
         private void EvaluateSelectedCategory()
         {
             if (SelectedCategory == Properties.Literals.Categories_01)
-                Tasks = [.. _tasksBasicExercises.Select(t => t.Item1)];
+                _tasks = [.. _tasksBasicExercises.Select(t => t.Item1)];
             else
-                Tasks = [];
+                _tasks = [];
+
+            currentPage = 1;
+            UpdateTasksForCurrentPage();
+        }
+
+        private void UpdateTasksForCurrentPage()
+        {
+            if (currentPage <= 0)
+            {
+                currentPage = 1;
+                return;
+            }
+
+            int maxNumberOfPages = (int)Math.Ceiling((double)_tasks.Count / tasksPerPage);
+
+            if (currentPage > maxNumberOfPages)
+            {
+                currentPage = maxNumberOfPages;
+                return;
+            }
+
+            int startIndex = (currentPage - 1) * tasksPerPage;
+            TasksCurrentPage = [.. _tasks.Skip(startIndex).Take(tasksPerPage)];
+            CurrentPageInfoText = $"{startIndex + 1} {Properties.Literals.PageInfoText_To} " +
+                $"{(startIndex + tasksPerPage < _tasks.Count ? startIndex + tasksPerPage : _tasks.Count)} " +
+                $"{Properties.Literals.PageInfoText_Of} {_tasks.Count}";
         }
 
         private void EvaluateSelectedTask()
@@ -318,6 +365,10 @@ namespace SolutionsViewer.ViewModels
             InputField2Value = string.Empty;
             InputField3Value = string.Empty;
             InputField4Value = string.Empty;
+            Result = string.Empty;
+
+            if (string.IsNullOrEmpty(SelectedTask))
+                return;
 
             if (SelectedCategory == Properties.Literals.Categories_01)
             {

@@ -367,11 +367,47 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die → ähnelt.
+        /// </summary>
+        public static string NextButton_Caption {
+            get {
+                return ResourceManager.GetString("NextButton_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Result ähnelt.
         /// </summary>
         public static string Output_Label {
             get {
                 return ResourceManager.GetString("Output_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die of ähnelt.
+        /// </summary>
+        public static string PageInfoText_Of {
+            get {
+                return ResourceManager.GetString("PageInfoText_Of", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die to ähnelt.
+        /// </summary>
+        public static string PageInfoText_To {
+            get {
+                return ResourceManager.GetString("PageInfoText_To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ← ähnelt.
+        /// </summary>
+        public static string PreviousButton_Caption {
+            get {
+                return ResourceManager.GetString("PreviousButton_Caption", resourceCulture);
             }
         }
         
