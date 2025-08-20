@@ -23,7 +23,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_13,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_14,0,[Properties.Literals.FieldCaption_Celsius]),
             (Properties.Literals.BasicExercises_15,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Index]),
-            (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString])
+            (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_17,0,[Properties.Literals.FieldCaption_InputString])
         ];
 
         private int currentPage;
@@ -175,6 +176,10 @@ namespace SolutionsViewer.ViewModels
             else if (SelectedTask == Properties.Literals.BasicExercises_16)
             {
                 Result = BasicExercises.SwapFirstAndLastCharacters(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_17)
+            {
+                Result = BasicExercises.AddFirstCharacterToFrontAndBack(InputField1Value);
             }
         }
 

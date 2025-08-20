@@ -184,5 +184,18 @@ namespace SolutionsLibrary
 
             return $"{input[^1]}{input[1..^1]}{input[0]}";
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 17.
+        /// </summary>
+        /// <param name="input">Input string to add the first character to front and back.</param>
+        /// <returns>Input string with first character added to front and back.</returns>
+        public static string AddFirstCharacterToFrontAndBack(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return input;
+
+            return $"{input[0]}{input}{input[0]}";
+        }
     }
 }

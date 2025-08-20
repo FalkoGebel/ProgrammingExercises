@@ -165,6 +165,9 @@
   <data name="BasicExercises_16" xml:space="preserve">
     <value>Swap First and Last Characters</value>
   </data>
+  <data name="BasicExercises_17" xml:space="preserve">
+    <value>Add First Character to Front and Back</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

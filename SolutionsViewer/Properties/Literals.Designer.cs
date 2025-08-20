@@ -205,6 +205,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add First Character to Front and Back ähnelt.
+        /// </summary>
+        public static string BasicExercises_17 {
+            get {
+                return ResourceManager.GetString("BasicExercises_17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

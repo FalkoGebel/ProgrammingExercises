@@ -229,5 +229,19 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("w3resource", "ww3resourcew")]
+        [DataRow("", "")]
+        [DataRow("w", "www")]
+        [DataRow("ab", "aaba")]
+        [DataRow("abc", "aabca")]
+        [DataRow("The quick brown fox jumps over the lazy dog.", "TThe quick brown fox jumps over the lazy dog.T")]
+        public void Exercise_17_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.AddFirstCharacterToFrontAndBack(input);
+
+            result.Should().Be(expected);
+        }
     }
 }
