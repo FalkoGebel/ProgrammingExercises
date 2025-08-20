@@ -184,5 +184,27 @@ namespace SolutionsLibrary
 
             return $"{input[^1]}{input[1..^1]}{input[0]}";
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 17.
+        /// </summary>
+        /// <param name="input">Input string to add the first character to front and back.</param>
+        /// <returns>Input string with first character added to front and back.</returns>
+        public static string AddFirstCharacterToFrontAndBack(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return input;
+
+            return $"{input[0]}{input}{input[0]}";
+        }
+
+        /// <summary>
+        /// Solution for basic exercise number 18.
+        /// </summary>
+        /// <param name="number1">First number for check.</param>
+        /// <param name="number2">Second number for check.</param>
+        /// <returns>True, if one number is positive and one number is negative. Else false.</returns>
+        public static bool CheckPositiveAndNegativePair(double number1, double number2)
+            => number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0;
     }
 }

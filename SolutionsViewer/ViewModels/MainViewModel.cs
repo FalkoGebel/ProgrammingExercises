@@ -23,7 +23,9 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_13,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_14,0,[Properties.Literals.FieldCaption_Celsius]),
             (Properties.Literals.BasicExercises_15,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Index]),
-            (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString])
+            (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_17,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_18,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
         ];
 
         private int currentPage;
@@ -176,6 +178,10 @@ namespace SolutionsViewer.ViewModels
             {
                 Result = BasicExercises.SwapFirstAndLastCharacters(InputField1Value);
             }
+            else if (SelectedTask == Properties.Literals.BasicExercises_17)
+            {
+                Result = BasicExercises.AddFirstCharacterToFrontAndBack(InputField1Value);
+            }
         }
 
         [RelayCommand]
@@ -251,6 +257,17 @@ namespace SolutionsViewer.ViewModels
                 {
                     Result = $"{ae.Message}";
                 }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_18)
+            {
+                if (!double.TryParse(InputField1Value, out double number1) || !double.TryParse(InputField2Value, out double number2))
+                {
+                    Result = Properties.Literals.Error_InvalidNumbers;
+                    return;
+                }
+
+                Result = $"The numbers {number1} and {number2} are " +
+                    $"{(BasicExercises.CheckPositiveAndNegativePair(number1, number2) ? "" : "NOT ")}a positive and negative pair.";
             }
         }
 
