@@ -168,6 +168,9 @@
   <data name="BasicExercises_17" xml:space="preserve">
     <value>Add First Character to Front and Back</value>
   </data>
+  <data name="BasicExercises_18" xml:space="preserve">
+    <value>Check Positive and Negative Pair</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

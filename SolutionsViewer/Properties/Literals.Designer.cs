@@ -214,6 +214,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Positive and Negative Pair ähnelt.
+        /// </summary>
+        public static string BasicExercises_18 {
+            get {
+                return ResourceManager.GetString("BasicExercises_18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

@@ -243,5 +243,17 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(25, -5, true)]
+        [DataRow(-7, 26, true)]
+        [DataRow(-25, -5, false)]
+        [DataRow(25, 5, false)]
+        public void Exercise_18_return_correct_result(double number1, double number2, bool expected)
+        {
+            bool result = BasicExercises.CheckPositiveAndNegativePair(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }
