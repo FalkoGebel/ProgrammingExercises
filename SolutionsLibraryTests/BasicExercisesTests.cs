@@ -295,5 +295,18 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(25, false)]
+        [DataRow(120, true)]
+        [DataRow(225, false)]
+        [DataRow(211, true)]
+        [DataRow(301, false)]
+        public void Exercise_22_return_correct_result(int number, bool expected)
+        {
+            bool result = BasicExercises.CheckWithin20Of100Or200(number);
+
+            result.Should().Be(expected);
+        }
     }
 }

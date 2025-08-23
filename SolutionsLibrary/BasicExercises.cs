@@ -233,5 +233,13 @@ namespace SolutionsLibrary
         /// <returns>True, if one number or their sum equals 20. Else false.</returns>
         public static bool CheckFor20OrSumEquals20(int first, int second)
             => first == 20 || second == 20 || (first + second) == 20;
+
+        /// <summary>
+        /// Solution for basic exercise number 22.
+        /// </summary>
+        /// <param name="number">Number to do the check for.</param>
+        /// <returns>True if the number is in the twenties of 100 or in the twenties of 200. Otherwise false.</returns>
+        public static bool CheckWithin20Of100Or200(int number)
+            => Math.Abs(100 - number) <= 20 || Math.Abs(200 - number) <= 20;
     }
 }

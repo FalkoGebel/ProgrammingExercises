@@ -29,6 +29,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_19,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_20,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_21,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_22,0,[Properties.Literals.FieldCaption_Number]),
         ];
 
         private int currentPage;
@@ -184,6 +185,17 @@ namespace SolutionsViewer.ViewModels
             else if (SelectedTask == Properties.Literals.BasicExercises_17)
             {
                 Result = BasicExercises.AddFirstCharacterToFrontAndBack(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_22)
+            {
+                if (!int.TryParse(InputField1Value, out int number))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                Result = $"{number} is number is in the twenties of 100 or in the twenties of 200: " +
+                    $"{BasicExercises.CheckWithin20Of100Or200(number)}";
             }
         }
 
