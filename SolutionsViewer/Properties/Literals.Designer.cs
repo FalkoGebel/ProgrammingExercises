@@ -232,6 +232,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Absolute Difference or Double It ähnelt.
+        /// </summary>
+        public static string BasicExercises_20 {
+            get {
+                return ResourceManager.GetString("BasicExercises_20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

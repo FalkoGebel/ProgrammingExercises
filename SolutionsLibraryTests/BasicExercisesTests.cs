@@ -267,5 +267,19 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(25, -5, 60)]
+        [DataRow(5, 5, 0)]
+        [DataRow(-25, -5, 20)]
+        [DataRow(2, 2, 0)]
+        [DataRow(13, 40, 27)]
+        [DataRow(50, 21, 58)]
+        public void Exercise_20_return_correct_result(int number1, int number2, int expected)
+        {
+            int result = BasicExercises.AbsoluteDifferenceOrDoubleIt(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }
