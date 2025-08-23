@@ -201,10 +201,45 @@ namespace SolutionsLibrary
         /// <summary>
         /// Solution for basic exercise number 18.
         /// </summary>
-        /// <param name="number1">First number for check.</param>
-        /// <param name="number2">Second number for check.</param>
+        /// <param name="first">First number for check.</param>
+        /// <param name="second">Second number for check.</param>
         /// <returns>True, if one number is positive and one number is negative. Else false.</returns>
-        public static bool CheckPositiveAndNegativePair(double number1, double number2)
-            => number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0;
+        public static bool CheckPositiveAndNegativePair(double first, double second)
+            => first > 0 && second < 0 || first < 0 && second > 0;
+
+        /// <summary>
+        /// Solution for basic exercise number 19.
+        /// </summary>
+        /// <param name="first">First number for operation.</param>
+        /// <param name="second">Second number for operation.</param>
+        /// <returns>Sum of the two numbers or triple sum, if both numbers are equal.</returns>
+        public static int SumOrTripleSumOfIntegers(int first, int second)
+            => (first + second) * (first == second ? 3 : 1);
+
+        /// <summary>
+        /// Solution for basic exercise number 20.
+        /// </summary>
+        /// <param name="first">First number for operation.</param>
+        /// <param name="second">Second number for operation.</param>
+        /// <returns>The absolute difference or doubled, if first number ist greater then the second one.</returns>
+        public static int AbsoluteDifferenceOrDoubleIt(int first, int second)
+            => Math.Abs(first - second) * (first > second ? 2 : 1);
+
+        /// <summary>
+        /// Solution for basic exercise number 21.
+        /// </summary>
+        /// <param name="first">First number to check.</param>
+        /// <param name="second">Second number to check.</param>
+        /// <returns>True, if one number or their sum equals 20. Else false.</returns>
+        public static bool CheckFor20OrSumEquals20(int first, int second)
+            => first == 20 || second == 20 || (first + second) == 20;
+
+        /// <summary>
+        /// Solution for basic exercise number 22.
+        /// </summary>
+        /// <param name="number">Number to do the check for.</param>
+        /// <returns>True if the number is in the twenties of 100 or in the twenties of 200. Otherwise false.</returns>
+        public static bool CheckWithin20Of100Or200(int number)
+            => Math.Abs(100 - number) <= 20 || Math.Abs(200 - number) <= 20;
     }
 }

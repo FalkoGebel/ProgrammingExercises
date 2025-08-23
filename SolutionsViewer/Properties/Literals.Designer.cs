@@ -223,6 +223,42 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum or Triple Sum of Integers ähnelt.
+        /// </summary>
+        public static string BasicExercises_19 {
+            get {
+                return ResourceManager.GetString("BasicExercises_19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Absolute Difference or Double It ähnelt.
+        /// </summary>
+        public static string BasicExercises_20 {
+            get {
+                return ResourceManager.GetString("BasicExercises_20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check for 20 or Sum Equals 20 ähnelt.
+        /// </summary>
+        public static string BasicExercises_21 {
+            get {
+                return ResourceManager.GetString("BasicExercises_21", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Within 20 of 100 or 200 ähnelt.
+        /// </summary>
+        public static string BasicExercises_22 {
+            get {
+                return ResourceManager.GetString("BasicExercises_22", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

@@ -255,5 +255,58 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(25, -5, 20)]
+        [DataRow(5, 5, 30)]
+        [DataRow(-25, -5, -30)]
+        [DataRow(2, 2, 12)]
+        public void Exercise_19_return_correct_result(int number1, int number2, int expected)
+        {
+            int result = BasicExercises.SumOrTripleSumOfIntegers(number1, number2);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(25, -5, 60)]
+        [DataRow(5, 5, 0)]
+        [DataRow(-25, -5, 20)]
+        [DataRow(2, 2, 0)]
+        [DataRow(13, 40, 27)]
+        [DataRow(50, 21, 58)]
+        public void Exercise_20_return_correct_result(int number1, int number2, int expected)
+        {
+            int result = BasicExercises.AbsoluteDifferenceOrDoubleIt(number1, number2);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(25, -4, false)]
+        [DataRow(20, -5, true)]
+        [DataRow(25, 20, true)]
+        [DataRow(10, 10, true)]
+        [DataRow(11, 10, false)]
+        [DataRow(1, 19, true)]
+        public void Exercise_21_return_correct_result(int number1, int number2, bool expected)
+        {
+            bool result = BasicExercises.CheckFor20OrSumEquals20(number1, number2);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(25, false)]
+        [DataRow(120, true)]
+        [DataRow(225, false)]
+        [DataRow(211, true)]
+        [DataRow(301, false)]
+        public void Exercise_22_return_correct_result(int number, bool expected)
+        {
+            bool result = BasicExercises.CheckWithin20Of100Or200(number);
+
+            result.Should().Be(expected);
+        }
     }
 }
