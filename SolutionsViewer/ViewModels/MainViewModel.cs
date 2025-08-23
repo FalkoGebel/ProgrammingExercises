@@ -26,6 +26,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_16,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_17,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_18,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_19,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
         ];
 
         private int currentPage;
@@ -268,6 +269,17 @@ namespace SolutionsViewer.ViewModels
 
                 Result = $"The numbers {number1} and {number2} are " +
                     $"{(BasicExercises.CheckPositiveAndNegativePair(number1, number2) ? "" : "NOT ")}a positive and negative pair.";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_19)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) || !int.TryParse(InputField2Value, out int numberInteger2))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                Result = $"The sum or triple sum of {numberInteger1} and {numberInteger2} is " +
+                    $"{BasicExercises.SumOrTripleSumOfIntegers(numberInteger1, numberInteger2)}.";
             }
         }
 

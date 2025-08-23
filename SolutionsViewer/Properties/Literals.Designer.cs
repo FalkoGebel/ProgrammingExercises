@@ -223,6 +223,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum or Triple Sum of Integers ähnelt.
+        /// </summary>
+        public static string BasicExercises_19 {
+            get {
+                return ResourceManager.GetString("BasicExercises_19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

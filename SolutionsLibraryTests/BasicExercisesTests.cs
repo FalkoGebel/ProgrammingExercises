@@ -255,5 +255,17 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(25, -5, 20)]
+        [DataRow(5, 5, 30)]
+        [DataRow(-25, -5, -30)]
+        [DataRow(2, 2, 12)]
+        public void Exercise_19_return_correct_result(int number1, int number2, int expected)
+        {
+            int result = BasicExercises.SumOrTripleSumOfIntegers(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }

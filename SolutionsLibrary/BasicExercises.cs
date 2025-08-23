@@ -206,5 +206,14 @@ namespace SolutionsLibrary
         /// <returns>True, if one number is positive and one number is negative. Else false.</returns>
         public static bool CheckPositiveAndNegativePair(double number1, double number2)
             => number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0;
+
+        /// <summary>
+        /// Solution for basic exercise number 19.
+        /// </summary>
+        /// <param name="number1">First number for operation.</param>
+        /// <param name="number2">Second number for operation.</param>
+        /// <returns>Sum of the two numbers or triple sum, if both numbers are equal.</returns>
+        public static int SumOrTripleSumOfIntegers(int number1, int number2)
+            => (number1 + number2) * (number1 == number2 ? 3 : 1);
     }
 }
