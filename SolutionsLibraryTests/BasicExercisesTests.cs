@@ -281,5 +281,19 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(25, -4, false)]
+        [DataRow(20, -5, true)]
+        [DataRow(25, 20, true)]
+        [DataRow(10, 10, true)]
+        [DataRow(11, 10, false)]
+        [DataRow(1, 19, true)]
+        public void Exercise_21_return_correct_result(int number1, int number2, bool expected)
+        {
+            bool result = BasicExercises.CheckFor20OrSumEquals20(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }

@@ -241,6 +241,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check for 20 or Sum Equals 20 ähnelt.
+        /// </summary>
+        public static string BasicExercises_21 {
+            get {
+                return ResourceManager.GetString("BasicExercises_21", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

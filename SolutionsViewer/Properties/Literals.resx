@@ -177,6 +177,9 @@
   <data name="BasicExercises_20" xml:space="preserve">
     <value>Absolute Difference or Double It</value>
   </data>
+  <data name="BasicExercises_21" xml:space="preserve">
+    <value>Check for 20 or Sum Equals 20</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

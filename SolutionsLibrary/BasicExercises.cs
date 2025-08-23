@@ -224,5 +224,14 @@ namespace SolutionsLibrary
         /// <returns>The absolute difference or doubled, if first number ist greater then the second one.</returns>
         public static int AbsoluteDifferenceOrDoubleIt(int first, int second)
             => Math.Abs(first - second) * (first > second ? 2 : 1);
+
+        /// <summary>
+        /// Solution for basic exercise number 21.
+        /// </summary>
+        /// <param name="first">First number to check.</param>
+        /// <param name="second">Second number to check.</param>
+        /// <returns>True, if one number or their sum equals 20. Else false.</returns>
+        public static bool CheckFor20OrSumEquals20(int first, int second)
+            => first == 20 || second == 20 || (first + second) == 20;
     }
 }
