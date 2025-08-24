@@ -31,6 +31,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_21,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_22,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_23,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_24,0,[Properties.Literals.FieldCaption_InputString]),
         ];
 
         private int currentPage;
@@ -201,6 +202,10 @@ namespace SolutionsViewer.ViewModels
             else if (SelectedTask == Properties.Literals.BasicExercises_23)
             {
                 Result = BasicExercises.ConvertStringToLowercase(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_24)
+            {
+                Result = BasicExercises.FindLongestWordInString(InputField1Value);
             }
         }
 

@@ -248,5 +248,16 @@ namespace SolutionsLibrary
         /// <param name="input">The string to convert to lowercase.</param>
         /// <returns>The lowercased input string.</returns>
         public static string ConvertStringToLowercase(string input) => input.ToLower();
+
+        /// <summary>
+        /// Solution for basic exercise number 24.
+        /// </summary>
+        /// <param name="input">The string to find the longest word in.</param>
+        /// <returns>The longest word in the string - first appearence wins.</returns>
+        public static string FindLongestWordInString(string input) =>
+            input.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                 .Select(w => string.Concat(w.Where(c => char.IsLetter(c) || c == '-')).Trim('-'))
+                 .OrderByDescending(w => w.Length)
+                 .FirstOrDefault() ?? string.Empty;
     }
 }

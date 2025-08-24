@@ -318,5 +318,18 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("Write a C# sharp program to display the following pattern using the alphabet.", "following")]
+        [DataRow("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", "QUICK")]
+        [DataRow("a ab abc abcd bcd cd d", "abcd")]
+        [DataRow("This is a test with point.", "point")]
+        [DataRow("This is a test-.", "This")]
+        public void Exercise_23_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.FindLongestWordInString(input);
+
+            result.Should().Be(expected);
+        }
     }
 }
