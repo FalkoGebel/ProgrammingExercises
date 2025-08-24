@@ -241,5 +241,12 @@ namespace SolutionsLibrary
         /// <returns>True if the number is in the twenties of 100 or in the twenties of 200. Otherwise false.</returns>
         public static bool CheckWithin20Of100Or200(int number)
             => Math.Abs(100 - number) <= 20 || Math.Abs(200 - number) <= 20;
+
+        /// <summary>
+        /// Solution for basic exercise number 23.
+        /// </summary>
+        /// <param name="input">The string to convert to lowercase.</param>
+        /// <returns>The lowercased input string.</returns>
+        public static string ConvertStringToLowercase(string input) => input.ToLower();
     }
 }

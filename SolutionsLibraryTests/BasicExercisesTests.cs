@@ -308,5 +308,15 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("Write a C# sharp program to display the following pattern using the alphabet.", "write a c# sharp program to display the following pattern using the alphabet.")]
+        [DataRow("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", "the quick brown fox jumps over the lazy dog.")]
+        public void Exercise_22_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.ConvertStringToLowercase(input);
+
+            result.Should().Be(expected);
+        }
     }
 }

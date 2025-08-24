@@ -183,6 +183,9 @@
   <data name="BasicExercises_22" xml:space="preserve">
     <value>Check Within 20 of 100 or 200</value>
   </data>
+  <data name="BasicExercises_23" xml:space="preserve">
+    <value>Convert String to Lowercase</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

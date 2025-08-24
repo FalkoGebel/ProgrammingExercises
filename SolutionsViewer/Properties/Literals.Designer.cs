@@ -259,6 +259,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Convert String to Lowercase ähnelt.
+        /// </summary>
+        public static string BasicExercises_23 {
+            get {
+                return ResourceManager.GetString("BasicExercises_23", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
