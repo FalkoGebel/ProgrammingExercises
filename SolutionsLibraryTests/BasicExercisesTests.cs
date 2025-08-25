@@ -312,7 +312,7 @@ namespace SolutionsLibraryTests
         [DataTestMethod]
         [DataRow("Write a C# sharp program to display the following pattern using the alphabet.", "write a c# sharp program to display the following pattern using the alphabet.")]
         [DataRow("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", "the quick brown fox jumps over the lazy dog.")]
-        public void Exercise_22_return_correct_result(string input, string expected)
+        public void Exercise_24_return_correct_result(string input, string expected)
         {
             string result = BasicExercises.ConvertStringToLowercase(input);
 
@@ -333,11 +333,24 @@ namespace SolutionsLibraryTests
         }
 
         [TestMethod]
-        public void Exercise_25_return_correct_result()
+        public void Exercise_26_return_correct_result()
         {
             int expected = 824693;
 
             int result = BasicExercises.SumOfFirst500Primes();
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(12, 3)]
+        [DataRow(21, 3)]
+        [DataRow(312736, 22)]
+        [DataRow(12323, 11)]
+        [DataRow(-12323, 11)]
+        public void Exercise_27_return_correct_result(int input, int expected)
+        {
+            int result = BasicExercises.SumOfDigitsInInteger(input);
 
             result.Should().Be(expected);
         }

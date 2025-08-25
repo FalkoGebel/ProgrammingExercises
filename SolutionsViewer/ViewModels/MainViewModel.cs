@@ -34,6 +34,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_24,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_25,2,[]),
             (Properties.Literals.BasicExercises_26,2,[]),
+            (Properties.Literals.BasicExercises_27,0,[Properties.Literals.FieldCaption_Number]),
         ];
 
         private int currentPage;
@@ -208,6 +209,16 @@ namespace SolutionsViewer.ViewModels
             else if (SelectedTask == Properties.Literals.BasicExercises_24)
             {
                 Result = BasicExercises.FindLongestWordInString(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_27)
+            {
+                if (!int.TryParse(InputField1Value, out int number))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                Result = $"Sum of the digits of {number} is {BasicExercises.SumOfDigitsInInteger(number)}.";
             }
         }
 

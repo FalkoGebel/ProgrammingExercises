@@ -304,5 +304,13 @@
 
             return true;
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 27.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static int SumOfDigitsInInteger(int input)
+            => Math.Abs(input).ToString().ToCharArray().Select(c => int.Parse(c.ToString())).Sum();
     }
 }

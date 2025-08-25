@@ -295,6 +295,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum of Digits in Integer ähnelt.
+        /// </summary>
+        public static string BasicExercises_27 {
+            get {
+                return ResourceManager.GetString("BasicExercises_27", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
