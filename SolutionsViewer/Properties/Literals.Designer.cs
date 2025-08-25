@@ -277,6 +277,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print Odd Numbers 1 to 99 ähnelt.
+        /// </summary>
+        public static string BasicExercises_25 {
+            get {
+                return ResourceManager.GetString("BasicExercises_25", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

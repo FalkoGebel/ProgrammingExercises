@@ -1,11 +1,4 @@
-﻿
-
-
-
-
-
-
-namespace SolutionsLibrary
+﻿namespace SolutionsLibrary
 {
     public static class BasicExercises
     {
@@ -259,5 +252,12 @@ namespace SolutionsLibrary
                  .Select(w => string.Concat(w.Where(c => char.IsLetter(c) || c == '-')).Trim('-'))
                  .OrderByDescending(w => w.Length)
                  .FirstOrDefault() ?? string.Empty;
+
+        /// <summary>
+        /// Solution for basic exercise number 25.
+        /// </summary>
+        /// <returns>Returns all odd numbers between 1 and 99 - one number per line.</returns>
+        public static string PrintOddNumbers1To99() =>
+            string.Join("\n", Enumerable.Range(1, 99).Where(n => n % 2 != 0));
     }
 }

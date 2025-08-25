@@ -32,6 +32,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_22,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_23,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_24,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_25,2,[]),
         ];
 
         private int currentPage;
@@ -340,6 +341,10 @@ namespace SolutionsViewer.ViewModels
                          $"(35 + 5) % 7\t\t=\t{result2}\n" +
                          $"14 + -4 * 6 / 11\t\t=\t{result3}\n" +
                          $"2 + 15 / 6 * 1 - 7 % 2\t=\t{result4}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_25)
+            {
+                Result = BasicExercises.PrintOddNumbers1To99();
             }
         }
 
