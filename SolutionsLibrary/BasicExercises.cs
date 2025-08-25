@@ -312,5 +312,14 @@
         /// <returns></returns>
         public static int SumOfDigitsInInteger(int input)
             => Math.Abs(input).ToString().ToCharArray().Select(c => int.Parse(c.ToString())).Sum();
+
+        /// <summary>
+        /// Solution for basic exercise number 28.
+        /// </summary>
+        /// <param name="input">The string to reverse the words for.</param>
+        /// <returns>The input string with words reversed.</returns>
+        public static string ReverseWordsInSentence(string input) =>
+            string.Join(' ', input.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                                           .Reverse());
     }
 }

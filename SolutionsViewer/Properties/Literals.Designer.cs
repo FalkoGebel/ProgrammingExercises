@@ -304,6 +304,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Reverse Words in Sentence ähnelt.
+        /// </summary>
+        public static string BasicExercises_28 {
+            get {
+                return ResourceManager.GetString("BasicExercises_28", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

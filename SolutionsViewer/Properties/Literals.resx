@@ -198,6 +198,9 @@
   <data name="BasicExercises_27" xml:space="preserve">
     <value>Sum of Digits in Integer</value>
   </data>
+  <data name="BasicExercises_28" xml:space="preserve">
+    <value>Reverse Words in Sentence</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

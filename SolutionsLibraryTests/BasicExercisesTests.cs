@@ -354,5 +354,15 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("Display the pattern like pyramid using the alphabet.", "alphabet. the using pyramid like pattern the Display")]
+        [DataRow("This is a test-.", "test-. a is This")]
+        public void Exercise_28_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.ReverseWordsInSentence(input);
+
+            result.Should().Be(expected);
+        }
     }
 }

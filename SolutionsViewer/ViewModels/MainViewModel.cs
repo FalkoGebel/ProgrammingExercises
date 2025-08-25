@@ -35,6 +35,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_25,2,[]),
             (Properties.Literals.BasicExercises_26,2,[]),
             (Properties.Literals.BasicExercises_27,0,[Properties.Literals.FieldCaption_Number]),
+            (Properties.Literals.BasicExercises_28,0,[Properties.Literals.FieldCaption_InputString]),
         ];
 
         private int currentPage;
@@ -219,6 +220,10 @@ namespace SolutionsViewer.ViewModels
                 }
 
                 Result = $"Sum of the digits of {number} is {BasicExercises.SumOfDigitsInInteger(number)}.";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_28)
+            {
+                Result = BasicExercises.ReverseWordsInSentence(InputField1Value);
             }
         }
 
