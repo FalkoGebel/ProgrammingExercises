@@ -331,5 +331,15 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [TestMethod]
+        public void Exercise_25_return_correct_result()
+        {
+            int expected = 824693;
+
+            int result = BasicExercises.SumOfFirst500Primes();
+
+            result.Should().Be(expected);
+        }
     }
 }

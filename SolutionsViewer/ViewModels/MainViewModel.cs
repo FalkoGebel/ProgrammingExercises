@@ -33,6 +33,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_23,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_24,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_25,2,[]),
+            (Properties.Literals.BasicExercises_26,2,[]),
         ];
 
         private int currentPage;
@@ -345,6 +346,10 @@ namespace SolutionsViewer.ViewModels
             else if (SelectedTask == Properties.Literals.BasicExercises_25)
             {
                 Result = BasicExercises.PrintOddNumbers1To99();
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_26)
+            {
+                Result = $"Sum of first 500 primes: {BasicExercises.SumOfFirst500Primes()}";
             }
         }
 

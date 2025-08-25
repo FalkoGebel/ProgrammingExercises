@@ -286,6 +286,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum of First 500 Primes ähnelt.
+        /// </summary>
+        public static string BasicExercises_26 {
+            get {
+                return ResourceManager.GetString("BasicExercises_26", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
