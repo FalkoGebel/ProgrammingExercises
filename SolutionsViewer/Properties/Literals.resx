@@ -189,6 +189,18 @@
   <data name="BasicExercises_24" xml:space="preserve">
     <value>Find Longest Word in String</value>
   </data>
+  <data name="BasicExercises_25" xml:space="preserve">
+    <value>Print Odd Numbers 1 to 99</value>
+  </data>
+  <data name="BasicExercises_26" xml:space="preserve">
+    <value>Sum of First 500 Primes</value>
+  </data>
+  <data name="BasicExercises_27" xml:space="preserve">
+    <value>Sum of Digits in Integer</value>
+  </data>
+  <data name="BasicExercises_28" xml:space="preserve">
+    <value>Reverse Words in Sentence</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

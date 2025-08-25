@@ -277,6 +277,42 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print Odd Numbers 1 to 99 ähnelt.
+        /// </summary>
+        public static string BasicExercises_25 {
+            get {
+                return ResourceManager.GetString("BasicExercises_25", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum of First 500 Primes ähnelt.
+        /// </summary>
+        public static string BasicExercises_26 {
+            get {
+                return ResourceManager.GetString("BasicExercises_26", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sum of Digits in Integer ähnelt.
+        /// </summary>
+        public static string BasicExercises_27 {
+            get {
+                return ResourceManager.GetString("BasicExercises_27", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Reverse Words in Sentence ähnelt.
+        /// </summary>
+        public static string BasicExercises_28 {
+            get {
+                return ResourceManager.GetString("BasicExercises_28", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
