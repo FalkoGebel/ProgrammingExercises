@@ -38,6 +38,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_28,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_29,0,[Properties.Literals.FieldCaption_FilePath]),
             (Properties.Literals.BasicExercises_30,0,[Properties.Literals.FieldCaption_Hexadecimal]),
+            (Properties.Literals.BasicExercises_31,1,[Properties.Literals.FieldCaption_Array1, Properties.Literals.FieldCaption_Array2]),
         ];
 
         private int currentPage;
@@ -368,6 +369,31 @@ namespace SolutionsViewer.ViewModels
 
                 Result = $"{numberInteger1} and {numberInteger2} => " +
                     $"{BasicExercises.CheckFor20OrSumEquals20(numberInteger1, numberInteger2)}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_31)
+            {
+                if (InputField1Value == string.Empty || InputField2Value == string.Empty)
+                {
+                    Result = $"{Properties.Literals.Error_EmptyArray} {Properties.Literals.Error_ArrayFormatDescription}";
+                    return;
+                }
+
+                try
+                {
+                    int[] array1 = [.. InputField1Value.Split(',').Select(s => int.Parse(s.Trim()))];
+                    int[] array2 = [.. InputField2Value.Split(',').Select(s => int.Parse(s.Trim()))];
+
+                    Result = $"[{string.Join(", ", array1)}] * [{string.Join(", ", array2)}] = " +
+                        $"[{string.Join(", ", BasicExercises.MultiplyTwoArrays(array1, array2))}]";
+                }
+                catch (FormatException)
+                {
+                    Result = $"{Properties.Literals.Error_ArrayFormat} {Properties.Literals.Error_ArrayFormatDescription}";
+                }
+                catch (ArgumentException ae)
+                {
+                    Result = ae.Message;
+                }
             }
         }
 

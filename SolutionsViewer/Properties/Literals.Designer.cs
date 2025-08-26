@@ -331,11 +331,47 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Multiply Two Arrays ähnelt.
+        /// </summary>
+        public static string BasicExercises_31 {
+            get {
+                return ResourceManager.GetString("BasicExercises_31", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
             get {
                 return ResourceManager.GetString("Categories_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Invalid array format. ähnelt.
+        /// </summary>
+        public static string Error_ArrayFormat {
+            get {
+                return ResourceManager.GetString("Error_ArrayFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Array elements has to be comma seperated (e.g. 1,2,3,4). ähnelt.
+        /// </summary>
+        public static string Error_ArrayFormatDescription {
+            get {
+                return ResourceManager.GetString("Error_ArrayFormatDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Arrays must not be empty. ähnelt.
+        /// </summary>
+        public static string Error_EmptyArray {
+            get {
+                return ResourceManager.GetString("Error_EmptyArray", resourceCulture);
             }
         }
         
@@ -372,6 +408,24 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Age {
             get {
                 return ResourceManager.GetString("FieldCaption_Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Array 1 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Array1 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Array1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Array 2 ähnelt.
+        /// </summary>
+        public static string FieldCaption_Array2 {
+            get {
+                return ResourceManager.GetString("FieldCaption_Array2", resourceCulture);
             }
         }
         

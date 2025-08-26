@@ -375,5 +375,15 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4 }, new int[] { 1, 4, 9, 16 })]
+        [DataRow(new int[] { 1, 3, -5, 4 }, new int[] { 1, 4, -5, -2 }, new int[] { 1, 12, 25, -8 })]
+        public void Exercise_31_return_correct_result(int[] array1, int[] array2, int[] expected)
+        {
+            int[] result = BasicExercises.MultiplyTwoArrays(array1, array2);
+
+            result.Should().BeEquivalentTo(expected);
+        }
     }
 }
