@@ -364,5 +364,16 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("4B0", 1200)]
+        [DataRow("2A", 42)]
+        [DataRow("AAA", 2730)]
+        public void Exercise_30_return_correct_result(string input, long expected)
+        {
+            long result = BasicExercises.HexadecimalToDecimal(input);
+
+            result.Should().Be(expected);
+        }
     }
 }

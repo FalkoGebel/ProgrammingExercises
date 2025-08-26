@@ -36,6 +36,8 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_26,2,[]),
             (Properties.Literals.BasicExercises_27,0,[Properties.Literals.FieldCaption_Number]),
             (Properties.Literals.BasicExercises_28,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_29,0,[Properties.Literals.FieldCaption_FilePath]),
+            (Properties.Literals.BasicExercises_30,0,[Properties.Literals.FieldCaption_Hexadecimal]),
         ];
 
         private int currentPage;
@@ -224,6 +226,28 @@ namespace SolutionsViewer.ViewModels
             else if (SelectedTask == Properties.Literals.BasicExercises_28)
             {
                 Result = BasicExercises.ReverseWordsInSentence(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_29)
+            {
+                try
+                {
+                    Result = $"File size in bytes: {BasicExercises.FileSizeInBytes(InputField1Value)}";
+                }
+                catch (Exception e)
+                {
+                    Result = e.Message;
+                }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_30)
+            {
+                try
+                {
+                    Result = $"Hexadecimal {InputField1Value} to decimal is {BasicExercises.HexadecimalToDecimal(InputField1Value)}";
+                }
+                catch (Exception e)
+                {
+                    Result = e.Message;
+                }
             }
         }
 

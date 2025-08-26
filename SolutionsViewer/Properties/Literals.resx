@@ -201,6 +201,12 @@
   <data name="BasicExercises_28" xml:space="preserve">
     <value>Reverse Words in Sentence</value>
   </data>
+  <data name="BasicExercises_29" xml:space="preserve">
+    <value>File Size in Bytes</value>
+  </data>
+  <data name="BasicExercises_30" xml:space="preserve">
+    <value>Hexadecimal to Decimal</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
@@ -218,6 +224,12 @@
   </data>
   <data name="FieldCaption_Celsius" xml:space="preserve">
     <value>° Celsius</value>
+  </data>
+  <data name="FieldCaption_FilePath" xml:space="preserve">
+    <value>File path</value>
+  </data>
+  <data name="FieldCaption_Hexadecimal" xml:space="preserve">
+    <value>Hexadecimal</value>
   </data>
   <data name="FieldCaption_Index" xml:space="preserve">
     <value>Index</value>

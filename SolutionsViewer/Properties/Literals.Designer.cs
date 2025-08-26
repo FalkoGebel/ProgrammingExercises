@@ -313,6 +313,24 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die File Size in Bytes ähnelt.
+        /// </summary>
+        public static string BasicExercises_29 {
+            get {
+                return ResourceManager.GetString("BasicExercises_29", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hexadecimal to Decimal ähnelt.
+        /// </summary>
+        public static string BasicExercises_30 {
+            get {
+                return ResourceManager.GetString("BasicExercises_30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
@@ -363,6 +381,24 @@ namespace SolutionsViewer.Properties {
         public static string FieldCaption_Celsius {
             get {
                 return ResourceManager.GetString("FieldCaption_Celsius", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die File path ähnelt.
+        /// </summary>
+        public static string FieldCaption_FilePath {
+            get {
+                return ResourceManager.GetString("FieldCaption_FilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hexadecimal ähnelt.
+        /// </summary>
+        public static string FieldCaption_Hexadecimal {
+            get {
+                return ResourceManager.GetString("FieldCaption_Hexadecimal", resourceCulture);
             }
         }
         

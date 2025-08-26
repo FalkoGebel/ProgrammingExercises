@@ -321,5 +321,19 @@
         public static string ReverseWordsInSentence(string input) =>
             string.Join(' ', input.Split(' ', StringSplitOptions.RemoveEmptyEntries)
                                            .Reverse());
+
+        /// <summary>
+        /// Solution for basic exercise number 29.
+        /// </summary>
+        /// <param name="filePath">The path of the file to get the size in bytes for.</param>
+        /// <returns>Size of the file in bytes.</returns>
+        public static long FileSizeInBytes(string filePath) => new FileInfo(filePath).Length;
+
+        /// <summary>
+        /// Solution for basic exercise number 30.
+        /// </summary>
+        /// <param name="input">The string representing the hexadecimal to convert to decimal.</param>
+        /// <returns>The decimal represented by the given hexadecimal.</returns>
+        public static long HexadecimalToDecimal(string input) => Convert.ToInt64(input, 16);
     }
 }
