@@ -321,5 +321,41 @@
         public static string ReverseWordsInSentence(string input) =>
             string.Join(' ', input.Split(' ', StringSplitOptions.RemoveEmptyEntries)
                                            .Reverse());
+
+        /// <summary>
+        /// Solution for basic exercise number 29.
+        /// </summary>
+        /// <param name="filePath">The path of the file to get the size in bytes for.</param>
+        /// <returns>Size of the file in bytes.</returns>
+        public static long FileSizeInBytes(string filePath) => new FileInfo(filePath).Length;
+
+        /// <summary>
+        /// Solution for basic exercise number 30.
+        /// </summary>
+        /// <param name="input">The string representing the hexadecimal to convert to decimal.</param>
+        /// <returns>The decimal represented by the given hexadecimal.</returns>
+        public static long HexadecimalToDecimal(string input) => Convert.ToInt64(input, 16);
+
+        /// <summary>
+        /// Solution for basic exercise number 31.
+        /// </summary>
+        /// <param name="array1">First array to multiply.</param>
+        /// <param name="array2">Second array to multiply.</param>
+        /// <returns>Array as result of the multiplication.</returns>
+        /// <exception cref="ArgumentNullException">Arrays must not be null.</exception>
+        /// <exception cref="ArgumentException">Arrays has to be the same length.</exception>
+        public static int[] MultiplyTwoArrays(int[] array1, int[] array2)
+        {
+            if (array1 == null)
+                throw new ArgumentNullException(nameof(array1), "Input arrays must not be null.");
+
+            if (array2 == null)
+                throw new ArgumentNullException(nameof(array2), "Input arrays must not be null.");
+
+            if (array1.Length != array2.Length)
+                throw new ArgumentException("Both arrays must have the same length.");
+
+            return [.. array1.Zip(array2, (a, b) => a * b)];
+        }
     }
 }

@@ -201,8 +201,26 @@
   <data name="BasicExercises_28" xml:space="preserve">
     <value>Reverse Words in Sentence</value>
   </data>
+  <data name="BasicExercises_29" xml:space="preserve">
+    <value>File Size in Bytes</value>
+  </data>
+  <data name="BasicExercises_30" xml:space="preserve">
+    <value>Hexadecimal to Decimal</value>
+  </data>
+  <data name="BasicExercises_31" xml:space="preserve">
+    <value>Multiply Two Arrays</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
+  </data>
+  <data name="Error_ArrayFormat" xml:space="preserve">
+    <value>Invalid array format.</value>
+  </data>
+  <data name="Error_ArrayFormatDescription" xml:space="preserve">
+    <value>Array elements has to be comma seperated (e.g. 1,2,3,4).</value>
+  </data>
+  <data name="Error_EmptyArray" xml:space="preserve">
+    <value>Arrays must not be empty.</value>
   </data>
   <data name="Error_IntegersOnly" xml:space="preserve">
     <value>Integers only!</value>
@@ -216,8 +234,20 @@
   <data name="FieldCaption_Age" xml:space="preserve">
     <value>Age</value>
   </data>
+  <data name="FieldCaption_Array1" xml:space="preserve">
+    <value>Array 1</value>
+  </data>
+  <data name="FieldCaption_Array2" xml:space="preserve">
+    <value>Array 2</value>
+  </data>
   <data name="FieldCaption_Celsius" xml:space="preserve">
     <value>° Celsius</value>
+  </data>
+  <data name="FieldCaption_FilePath" xml:space="preserve">
+    <value>File path</value>
+  </data>
+  <data name="FieldCaption_Hexadecimal" xml:space="preserve">
+    <value>Hexadecimal</value>
   </data>
   <data name="FieldCaption_Index" xml:space="preserve">
     <value>Index</value>
