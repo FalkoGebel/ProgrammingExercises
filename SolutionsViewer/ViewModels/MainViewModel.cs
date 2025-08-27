@@ -39,6 +39,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_29,0,[Properties.Literals.FieldCaption_FilePath]),
             (Properties.Literals.BasicExercises_30,0,[Properties.Literals.FieldCaption_Hexadecimal]),
             (Properties.Literals.BasicExercises_31,1,[Properties.Literals.FieldCaption_Array1, Properties.Literals.FieldCaption_Array2]),
+            (Properties.Literals.BasicExercises_32,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_33,0,[Properties.Literals.FieldCaption_Number]),
         ];
 
@@ -250,6 +251,10 @@ namespace SolutionsViewer.ViewModels
                 {
                     Result = e.Message;
                 }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_32)
+            {
+                Result = BasicExercises.FourCopiesOfLastFourCharacters(InputField1Value);
             }
             else if (SelectedTask == Properties.Literals.BasicExercises_33)
             {

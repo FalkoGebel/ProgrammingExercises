@@ -359,6 +359,16 @@
         }
 
         /// <summary>
+        /// Solution for basic exercise number 32.
+        /// </summary>
+        /// <param name="input">The input string to take the last four charactes from.</param>
+        /// <returns>Input string, if shorter than 4 characters; last four characters four times, else.</returns>
+        public static string FourCopiesOfLastFourCharacters(string input)
+            => input.Length < 4
+                ? input
+                : string.Concat(Enumerable.Repeat(input[^4..], 4));
+
+        /// <summary>
         /// Solution for basic exercise number 33.
         /// </summary>
         /// <param name="number">Number to check for multiple of 3 or 7.</param>

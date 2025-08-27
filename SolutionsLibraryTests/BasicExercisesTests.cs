@@ -386,6 +386,16 @@ namespace SolutionsLibraryTests
             result.Should().BeEquivalentTo(expected);
         }
 
+        [DataTestMethod]
+        [DataRow("The quick brown fox jumps over the lazy dog.", "dog.dog.dog.dog.")]
+        [DataRow("abc", "abc")]
+        [DataRow("abcd", "abcdabcdabcdabcd")]
+        public void Exercise_32_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.FourCopiesOfLastFourCharacters(input);
+
+            result.Should().Be(expected);
+        }
 
         [DataTestMethod]
         [DataRow(0)]

@@ -210,6 +210,9 @@
   <data name="BasicExercises_31" xml:space="preserve">
     <value>Multiply Two Arrays</value>
   </data>
+  <data name="BasicExercises_32" xml:space="preserve">
+    <value>Four Copies of Last Four Characters</value>
+  </data>
   <data name="BasicExercises_33" xml:space="preserve">
     <value>Check Multiple of 3 or 7</value>
   </data>
