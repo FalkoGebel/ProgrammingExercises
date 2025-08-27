@@ -359,7 +359,7 @@
         }
 
         /// <summary>
-        /// Solution for basic exercise number 32.
+        /// Solution for basic exercise number 33.
         /// </summary>
         /// <param name="number">Number to check for multiple of 3 or 7.</param>
         /// <returns><see langword="true"/> if the specified number is a multiple of 3 or 7; otherwise, <see langword="false"/>.</returns>

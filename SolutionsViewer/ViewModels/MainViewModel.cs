@@ -39,7 +39,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_29,0,[Properties.Literals.FieldCaption_FilePath]),
             (Properties.Literals.BasicExercises_30,0,[Properties.Literals.FieldCaption_Hexadecimal]),
             (Properties.Literals.BasicExercises_31,1,[Properties.Literals.FieldCaption_Array1, Properties.Literals.FieldCaption_Array2]),
-            (Properties.Literals.BasicExercises_32,0,[Properties.Literals.FieldCaption_Number]),
+            (Properties.Literals.BasicExercises_33,0,[Properties.Literals.FieldCaption_Number]),
         ];
 
         private int currentPage;
@@ -251,7 +251,7 @@ namespace SolutionsViewer.ViewModels
                     Result = e.Message;
                 }
             }
-            else if (SelectedTask == Properties.Literals.BasicExercises_32)
+            else if (SelectedTask == Properties.Literals.BasicExercises_33)
             {
                 if (!int.TryParse(InputField1Value, out int number))
                 {
