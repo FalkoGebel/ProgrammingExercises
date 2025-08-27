@@ -340,6 +340,24 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Four Copies of Last Four Characters ähnelt.
+        /// </summary>
+        public static string BasicExercises_32 {
+            get {
+                return ResourceManager.GetString("BasicExercises_32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Multiple of 3 or 7 ähnelt.
+        /// </summary>
+        public static string BasicExercises_33 {
+            get {
+                return ResourceManager.GetString("BasicExercises_33", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
