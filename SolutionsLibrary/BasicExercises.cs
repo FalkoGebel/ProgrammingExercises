@@ -357,5 +357,19 @@
 
             return [.. array1.Zip(array2, (a, b) => a * b)];
         }
+
+        /// <summary>
+        /// Solution for basic exercise number 32.
+        /// </summary>
+        /// <param name="number">Number to check for multiple of 3 or 7.</param>
+        /// <returns><see langword="true"/> if the specified number is a multiple of 3 or 7; otherwise, <see langword="false"/>.</returns>
+        /// <exception cref="ArgumentException">Thrown, if number is not a positive integer.</exception>
+        public static bool CheckMultipleOf3or7(int number)
+        {
+            if (number <= 0)
+                throw new ArgumentException("Number must be greater than zero.");
+
+            return number % 3 == 0 || number % 7 == 0;
+        }
     }
 }

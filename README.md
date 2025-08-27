@@ -1,6 +1,6 @@
 With this repository I would like to present my solutions for the C# programming exercises on [W3Resource](https://www.w3resource.com/csharp-exercises/).
 
-+ [Basic Exercises](https://www.w3resource.com/csharp-exercises/basic/index.php) - work in progress (exercises 1 to 31 done)
++ [Basic Exercises](https://www.w3resource.com/csharp-exercises/basic/index.ph	p) - work in progress (exercises 1 to 32 done)
 + [Basic Algorithm](https://www.w3resource.com/csharp-exercises/basic-algo/index.php) - planned for later
 + [Exception Handling](https://www.w3resource.com/csharp-exercises/exception-handling/index.php) - planned for later
 + [Data Types Exercises](https://www.w3resource.com/csharp-exercises/data-types/index.php) - planned for later

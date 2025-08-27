@@ -340,6 +340,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Multiple of 3 or 7 ähnelt.
+        /// </summary>
+        public static string BasicExercises_32 {
+            get {
+                return ResourceManager.GetString("BasicExercises_32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

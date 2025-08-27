@@ -385,5 +385,31 @@ namespace SolutionsLibraryTests
 
             result.Should().BeEquivalentTo(expected);
         }
+
+
+        [DataTestMethod]
+        [DataRow(0)]
+        [DataRow(-5)]
+        public void Exercise_32_invalid_parameters_and_exception(int number)
+        {
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                BasicExercises.CheckMultipleOf3or7(number);
+            });
+        }
+
+
+        [DataTestMethod]
+        [DataRow(15, true)]
+        [DataRow(23, false)]
+        [DataRow(2, false)]
+        [DataRow(1, false)]
+        [DataRow(7, true)]
+        public void Exercise_32_return_correct_result(int number, bool expected)
+        {
+            bool result = BasicExercises.CheckMultipleOf3or7(number);
+
+            result.Should().Be(expected);
+        }
     }
 }
