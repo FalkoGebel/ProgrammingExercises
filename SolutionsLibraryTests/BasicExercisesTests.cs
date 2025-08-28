@@ -408,7 +408,6 @@ namespace SolutionsLibraryTests
             });
         }
 
-
         [DataTestMethod]
         [DataRow(15, true)]
         [DataRow(23, false)]
@@ -418,6 +417,46 @@ namespace SolutionsLibraryTests
         public void Exercise_33_return_correct_result(int number, bool expected)
         {
             bool result = BasicExercises.CheckMultipleOf3or7(number);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow("Hello how are you?", "Hello", true)]
+        [DataRow("Hello how are you?", "Hello", true)]
+        [DataRow("Hello how are you?", "Bye", false)]
+        [DataRow("Hello how are you?", "you?", false)]
+        [DataRow("", "you?", false)]
+        [DataRow("", "", true)]
+        public void Exercise_34_return_correct_result(string input, string prefix, bool expected)
+        {
+            bool result = BasicExercises.CheckStringStartsWithWord(input, prefix);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(75, 250, true)]
+        [DataRow(100, 250, false)]
+        [DataRow(75, 200, false)]
+        [DataRow(99, 201, true)]
+        public void Exercise_35_return_correct_result(int number1, int number2, bool expected)
+        {
+            bool result = BasicExercises.CheckNumbersLessThan100AndGreaterThan200(number1, number2);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(-5, 8, true)]
+        [DataRow(100, 250, false)]
+        [DataRow(75, 200, false)]
+        [DataRow(8, -5, true)]
+        [DataRow(18, -5, true)]
+        [DataRow(8, -15, true)]
+        public void Exercise_36_return_correct_result(int number1, int number2, bool expected)
+        {
+            bool result = BasicExercises.CheckIntegerInRangeMinus10To10(number1, number2);
 
             result.Should().Be(expected);
         }

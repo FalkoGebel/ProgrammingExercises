@@ -41,6 +41,9 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_31,1,[Properties.Literals.FieldCaption_Array1, Properties.Literals.FieldCaption_Array2]),
             (Properties.Literals.BasicExercises_32,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_33,0,[Properties.Literals.FieldCaption_Number]),
+            (Properties.Literals.BasicExercises_34,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Word]),
+            (Properties.Literals.BasicExercises_35,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_36,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
         ];
 
         private int currentPage;
@@ -416,6 +419,32 @@ namespace SolutionsViewer.ViewModels
                 {
                     Result = ae.Message;
                 }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_34)
+            {
+                Result = $"The string '{InputField1Value}' starts with word {InputField2Value}: {BasicExercises.CheckStringStartsWithWord(InputField1Value, InputField2Value)}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_35)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) || !int.TryParse(InputField2Value, out int numberInteger2))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                Result = $"Of the numbers {numberInteger1} and {numberInteger2} one is less than 100 and greater than 200: " +
+                    $"{BasicExercises.CheckNumbersLessThan100AndGreaterThan200(numberInteger1, numberInteger2)}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_36)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) || !int.TryParse(InputField2Value, out int numberInteger2))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                Result = $"Of the numbers {numberInteger1} and {numberInteger2} one is in the range -10 to 10: " +
+                    $"{BasicExercises.CheckIntegerInRangeMinus10To10(numberInteger1, numberInteger2)}";
             }
         }
 
