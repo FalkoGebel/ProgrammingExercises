@@ -434,5 +434,17 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(75, 250, true)]
+        [DataRow(100, 250, false)]
+        [DataRow(75, 200, false)]
+        [DataRow(99, 201, true)]
+        public void Exercise_35_return_correct_result(int number1, int number2, bool expected)
+        {
+            bool result = BasicExercises.CheckNumbersLessThan100AndGreaterThan200(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }

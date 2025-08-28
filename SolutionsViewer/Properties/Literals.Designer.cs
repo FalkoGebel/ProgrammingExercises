@@ -367,6 +367,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Numbers Less than 100 &amp; Greater than 200 ähnelt.
+        /// </summary>
+        public static string BasicExercises_35 {
+            get {
+                return ResourceManager.GetString("BasicExercises_35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
