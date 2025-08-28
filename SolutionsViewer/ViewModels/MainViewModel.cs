@@ -41,6 +41,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_31,1,[Properties.Literals.FieldCaption_Array1, Properties.Literals.FieldCaption_Array2]),
             (Properties.Literals.BasicExercises_32,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_33,0,[Properties.Literals.FieldCaption_Number]),
+            (Properties.Literals.BasicExercises_34,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Word]),
         ];
 
         private int currentPage;
@@ -416,6 +417,10 @@ namespace SolutionsViewer.ViewModels
                 {
                     Result = ae.Message;
                 }
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_34)
+            {
+                Result = $"The string '{InputField1Value}' starts with word {InputField2Value}: {BasicExercises.CheckStringStartsWithWord(InputField1Value, InputField2Value)}";
             }
         }
 

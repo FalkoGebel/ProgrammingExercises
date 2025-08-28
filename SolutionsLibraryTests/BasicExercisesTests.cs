@@ -408,7 +408,6 @@ namespace SolutionsLibraryTests
             });
         }
 
-
         [DataTestMethod]
         [DataRow(15, true)]
         [DataRow(23, false)]
@@ -418,6 +417,20 @@ namespace SolutionsLibraryTests
         public void Exercise_33_return_correct_result(int number, bool expected)
         {
             bool result = BasicExercises.CheckMultipleOf3or7(number);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow("Hello how are you?", "Hello", true)]
+        [DataRow("Hello how are you?", "Hello", true)]
+        [DataRow("Hello how are you?", "Bye", false)]
+        [DataRow("Hello how are you?", "you?", false)]
+        [DataRow("", "you?", false)]
+        [DataRow("", "", true)]
+        public void Exercise_34_return_correct_result(string input, string prefix, bool expected)
+        {
+            bool result = BasicExercises.CheckStringStartsWithWord(input, prefix);
 
             result.Should().Be(expected);
         }

@@ -216,6 +216,9 @@
   <data name="BasicExercises_33" xml:space="preserve">
     <value>Check Multiple of 3 or 7</value>
   </data>
+  <data name="BasicExercises_34" xml:space="preserve">
+    <value>Check String Starts with Word</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>
@@ -287,6 +290,9 @@
   </data>
   <data name="FieldCaption_NumberZ" xml:space="preserve">
     <value>z</value>
+  </data>
+  <data name="FieldCaption_Word" xml:space="preserve">
+    <value>Word</value>
   </data>
   <data name="MainView_Title" xml:space="preserve">
     <value>Programming Exercises Solutions Viewer</value>
