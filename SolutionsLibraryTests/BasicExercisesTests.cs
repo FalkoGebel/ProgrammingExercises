@@ -446,5 +446,19 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(-5, 8, true)]
+        [DataRow(100, 250, false)]
+        [DataRow(75, 200, false)]
+        [DataRow(8, -5, true)]
+        [DataRow(18, -5, true)]
+        [DataRow(8, -15, true)]
+        public void Exercise_36_return_correct_result(int number1, int number2, bool expected)
+        {
+            bool result = BasicExercises.CheckIntegerInRangeMinus10To10(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }

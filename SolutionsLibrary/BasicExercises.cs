@@ -401,5 +401,14 @@
         /// <returns><see langword="true"/> if one number is less than 100 and the other greater than 200; otherwise, <see langword="false"/>.</returns>
         public static bool CheckNumbersLessThan100AndGreaterThan200(int first, int second)
             => (first < 100 && second > 200) || (first > 200 && second < 100);
+
+        /// <summary>
+        /// Solution for basic exercise number 36.
+        /// </summary>
+        /// <param name="first">First number to check.</param>
+        /// <param name="second">Second number to check.</param>
+        /// <returns><see langword="true"/> if one of the given numbers is in the range of -10 to 10; otherwise, <see langword="false"/>.</returns>
+        public static bool CheckIntegerInRangeMinus10To10(int first, int second)
+            => (first >= -10 && first <= 10) || (second >= -10 && second <= 10);
     }
 }

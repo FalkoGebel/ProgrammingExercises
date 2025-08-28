@@ -376,6 +376,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Integer in Range -10 to 10 ähnelt.
+        /// </summary>
+        public static string BasicExercises_36 {
+            get {
+                return ResourceManager.GetString("BasicExercises_36", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
