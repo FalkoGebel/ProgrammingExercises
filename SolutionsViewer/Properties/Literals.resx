@@ -231,6 +231,9 @@
   <data name="BasicExercises_38" xml:space="preserve">
     <value>Extract "PH" from String</value>
   </data>
+  <data name="BasicExercises_39" xml:space="preserve">
+    <value>Largest and Lowest of Three Integers</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

@@ -429,5 +429,15 @@
         /// <param name="input">The string to check, if "PH" is extractable from the beginning.</param>
         /// <returns>"PH", if extractable from the beginning of the given string; empty string else.</returns>
         public static string ExtractPHromString(string input) => input.StartsWith("PH") ? "PH" : string.Empty;
+
+        /// <summary>
+        /// Solution for basic exercise number 39.
+        /// </summary>
+        /// <param name="first">The first number to check.</param>
+        /// <param name="second">The second number to check.</param>
+        /// <param name="third">The third number to check.</param>
+        /// <returns>The largest and the lowest of the three given numbers.</returns>
+        public static (int largest, int lowest) LargestAndLowestOfThreeIntegers(int first, int second, int third)
+            => (Math.Max(first, Math.Max(second, third)), Math.Min(first, Math.Min(second, third)));
     }
 }

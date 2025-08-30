@@ -403,6 +403,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Largest and Lowest of Three Integers ähnelt.
+        /// </summary>
+        public static string BasicExercises_39 {
+            get {
+                return ResourceManager.GetString("BasicExercises_39", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {

@@ -490,5 +490,18 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow(5, 6, 7, 7, 5)]
+        [DataRow(17, 23, 11, 23, 11)]
+        [DataRow(1, 2, 3, 3, 1)]
+        [DataRow(1, 1, 1, 1, 1)]
+        public void Exercise_39_return_correct_results(int number1, int number2, int number3, int largestExpected, int lowestExpected)
+        {
+            (int largest, int lowest) = BasicExercises.LargestAndLowestOfThreeIntegers(number1, number2, number3);
+
+            largest.Should().Be(largestExpected);
+            lowest.Should().Be(lowestExpected);
+        }
     }
 }

@@ -46,6 +46,7 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_36,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_37,0,[Properties.Literals.FieldCaption_InputString]),
             (Properties.Literals.BasicExercises_38,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_39,3,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3]),
         ];
 
         private int currentPage;
@@ -504,8 +505,25 @@ namespace SolutionsViewer.ViewModels
                     Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
                     return;
                 }
+
                 (int result1, int result2) = BasicExercises.SpecifiedFormulaWithThreeNumbers(x, y, z);
+
                 Result = $"({x} + {y}) * {z} = {result1}\n{x} * {y} + {y} * {z} = {result2}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_39)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) ||
+                    !int.TryParse(InputField2Value, out int numberInteger2) ||
+                    !int.TryParse(InputField3Value, out int numberInteger3))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                (int largest, int lowest) = BasicExercises.LargestAndLowestOfThreeIntegers(numberInteger1, numberInteger2, numberInteger3);
+
+                Result = $"The largest of {numberInteger1}, {numberInteger2} and {numberInteger3} is " +
+                    $"{largest} and the lowest is {lowest}.";
             }
         }
 
