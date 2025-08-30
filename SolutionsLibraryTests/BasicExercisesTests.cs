@@ -460,5 +460,20 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("PHP Tutorial", "P Tutorial")]
+        [DataRow("xHP Test", "x Test")]
+        [DataRow("PHX Tutorial", "PHX Tutorial")]
+        [DataRow("xPHP Tutorial", "xPHP Tutorial")]
+        [DataRow("ab", "ab")]
+        [DataRow("a", "a")]
+        [DataRow("", "")]
+        public void Exercise_37_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.RemoveHPFromString(input);
+
+            result.Should().Be(expected);
+        }
     }
 }

@@ -410,5 +410,17 @@
         /// <returns><see langword="true"/> if one of the given numbers is in the range of -10 to 10; otherwise, <see langword="false"/>.</returns>
         public static bool CheckIntegerInRangeMinus10To10(int first, int second)
             => (first >= -10 && first <= 10) || (second >= -10 && second <= 10);
+
+        /// <summary>
+        /// Solution for basic exercise number 37.
+        /// </summary>
+        /// <param name="input">The string to check for "HP" at the second position.</param>
+        /// <returns>The input string without removed second and third postion, if "HP" is found there.</returns>
+        public static string RemoveHPFromString(string input)
+            => input.Length < 3
+                ? input
+                : input.Substring(1, 2) == "HP"
+                    ? input.Remove(1, 2)
+                    : input;
     }
 }

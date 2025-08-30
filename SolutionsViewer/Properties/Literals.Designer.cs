@@ -385,6 +385,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Remove &quot;HP&quot; from String ähnelt.
+        /// </summary>
+        public static string BasicExercises_37 {
+            get {
+                return ResourceManager.GetString("BasicExercises_37", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
