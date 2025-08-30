@@ -439,5 +439,23 @@
         /// <returns>The largest and the lowest of the three given numbers.</returns>
         public static (int largest, int lowest) LargestAndLowestOfThreeIntegers(int first, int second, int third)
             => (Math.Max(first, Math.Max(second, third)), Math.Min(first, Math.Min(second, third)));
+
+        /// <summary>
+        /// Solution for basic exercise number 40.
+        /// </summary>
+        /// <param name="first">The first number to check.</param>
+        /// <param name="second">The second number to check.</param>
+        /// <returns>The number nearest to 20 or 0, if both numbers are the same distance.</returns>
+        /// <exception cref="ArgumentException">Thrown, if one of the given numbers is 0.</exception>
+        public static int NearestTo20OrReturn0(int first, int second)
+        {
+            if (first == 0 || second == 0)
+                throw new ArgumentException("Neither of the two numbers must be zero.");
+
+            int diff1 = Math.Abs(20 - first),
+                diff2 = Math.Abs(20 - second);
+
+            return diff1 == diff2 ? 0 : (diff1 < diff2 ? first : second);
+        }
     }
 }

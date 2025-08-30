@@ -503,5 +503,29 @@ namespace SolutionsLibraryTests
             largest.Should().Be(largestExpected);
             lowest.Should().Be(lowestExpected);
         }
+
+        [DataTestMethod]
+        [DataRow(0, 1)]
+        [DataRow(0, 0)]
+        [DataRow(-1, 0)]
+        public void Exercise_40_invalid_parameters_and_exception(int number1, int number2)
+        {
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                BasicExercises.NearestTo20OrReturn0(number1, number2);
+            });
+        }
+
+        [DataTestMethod]
+        [DataRow(5, 6, 6)]
+        [DataRow(17, 23, 0)]
+        [DataRow(1, 2, 2)]
+        [DataRow(1, 1, 0)]
+        public void Exercise_40_return_correct_results(int number1, int number2, int expected)
+        {
+            int result = BasicExercises.NearestTo20OrReturn0(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }

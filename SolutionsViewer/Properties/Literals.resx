@@ -234,6 +234,9 @@
   <data name="BasicExercises_39" xml:space="preserve">
     <value>Largest and Lowest of Three Integers</value>
   </data>
+  <data name="BasicExercises_40" xml:space="preserve">
+    <value>Nearest to 20 or Return 0</value>
+  </data>
   <data name="Categories_01" xml:space="preserve">
     <value>Basic Exercises</value>
   </data>

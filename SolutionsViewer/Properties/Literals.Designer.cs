@@ -412,6 +412,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nearest to 20 or Return 0 ähnelt.
+        /// </summary>
+        public static string BasicExercises_40 {
+            get {
+                return ResourceManager.GetString("BasicExercises_40", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
