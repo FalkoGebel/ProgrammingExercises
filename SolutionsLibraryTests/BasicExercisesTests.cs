@@ -460,5 +460,72 @@ namespace SolutionsLibraryTests
 
             result.Should().Be(expected);
         }
+
+        [DataTestMethod]
+        [DataRow("PHP Tutorial", "P Tutorial")]
+        [DataRow("xHP Test", "x Test")]
+        [DataRow("PHX Tutorial", "PHX Tutorial")]
+        [DataRow("xPHP Tutorial", "xPHP Tutorial")]
+        [DataRow("ab", "ab")]
+        [DataRow("a", "a")]
+        [DataRow("", "")]
+        public void Exercise_37_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.RemoveHPFromString(input);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow("PHP Tutorial", "PH")]
+        [DataRow("xHP Test", "")]
+        [DataRow("PHX Tutorial", "PH")]
+        [DataRow("xPHP Tutorial", "")]
+        [DataRow("ab", "")]
+        [DataRow("a", "")]
+        [DataRow("", "")]
+        public void Exercise_38_return_correct_result(string input, string expected)
+        {
+            string result = BasicExercises.ExtractPHromString(input);
+
+            result.Should().Be(expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(5, 6, 7, 7, 5)]
+        [DataRow(17, 23, 11, 23, 11)]
+        [DataRow(1, 2, 3, 3, 1)]
+        [DataRow(1, 1, 1, 1, 1)]
+        public void Exercise_39_return_correct_results(int number1, int number2, int number3, int largestExpected, int lowestExpected)
+        {
+            (int largest, int lowest) = BasicExercises.LargestAndLowestOfThreeIntegers(number1, number2, number3);
+
+            largest.Should().Be(largestExpected);
+            lowest.Should().Be(lowestExpected);
+        }
+
+        [DataTestMethod]
+        [DataRow(0, 1)]
+        [DataRow(0, 0)]
+        [DataRow(-1, 0)]
+        public void Exercise_40_invalid_parameters_and_exception(int number1, int number2)
+        {
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                BasicExercises.NearestTo20OrReturn0(number1, number2);
+            });
+        }
+
+        [DataTestMethod]
+        [DataRow(5, 6, 6)]
+        [DataRow(17, 23, 0)]
+        [DataRow(1, 2, 2)]
+        [DataRow(1, 1, 0)]
+        public void Exercise_40_return_correct_results(int number1, int number2, int expected)
+        {
+            int result = BasicExercises.NearestTo20OrReturn0(number1, number2);
+
+            result.Should().Be(expected);
+        }
     }
 }

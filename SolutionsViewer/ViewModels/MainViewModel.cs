@@ -44,6 +44,10 @@ namespace SolutionsViewer.ViewModels
             (Properties.Literals.BasicExercises_34,1,[Properties.Literals.FieldCaption_InputString, Properties.Literals.FieldCaption_Word]),
             (Properties.Literals.BasicExercises_35,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
             (Properties.Literals.BasicExercises_36,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
+            (Properties.Literals.BasicExercises_37,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_38,0,[Properties.Literals.FieldCaption_InputString]),
+            (Properties.Literals.BasicExercises_39,3,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2, Properties.Literals.FieldCaption_Number3]),
+            (Properties.Literals.BasicExercises_40,1,[Properties.Literals.FieldCaption_Number1, Properties.Literals.FieldCaption_Number2]),
         ];
 
         private int currentPage;
@@ -275,6 +279,14 @@ namespace SolutionsViewer.ViewModels
                     Result = ae.Message;
                 }
             }
+            else if (SelectedTask == Properties.Literals.BasicExercises_37)
+            {
+                Result = BasicExercises.RemoveHPFromString(InputField1Value);
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_38)
+            {
+                Result = BasicExercises.ExtractPHromString(InputField1Value);
+            }
         }
 
         [RelayCommand]
@@ -446,6 +458,26 @@ namespace SolutionsViewer.ViewModels
                 Result = $"Of the numbers {numberInteger1} and {numberInteger2} one is in the range -10 to 10: " +
                     $"{BasicExercises.CheckIntegerInRangeMinus10To10(numberInteger1, numberInteger2)}";
             }
+            else if (SelectedTask == Properties.Literals.BasicExercises_40)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) || !int.TryParse(InputField2Value, out int numberInteger2))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                try
+                {
+                    int result = BasicExercises.NearestTo20OrReturn0(numberInteger1, numberInteger2);
+
+                    Result = $"From the numbers {numberInteger1} and {numberInteger2} the nearest to 20 is " +
+                        $"{(result == 0 ? "none" : $"{result}")}.";
+                }
+                catch (ArgumentException ae)
+                {
+                    Result = $"{ae.Message}";
+                }
+            }
         }
 
         [RelayCommand]
@@ -494,8 +526,25 @@ namespace SolutionsViewer.ViewModels
                     Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
                     return;
                 }
+
                 (int result1, int result2) = BasicExercises.SpecifiedFormulaWithThreeNumbers(x, y, z);
+
                 Result = $"({x} + {y}) * {z} = {result1}\n{x} * {y} + {y} * {z} = {result2}";
+            }
+            else if (SelectedTask == Properties.Literals.BasicExercises_39)
+            {
+                if (!int.TryParse(InputField1Value, out int numberInteger1) ||
+                    !int.TryParse(InputField2Value, out int numberInteger2) ||
+                    !int.TryParse(InputField3Value, out int numberInteger3))
+                {
+                    Result = $"{Properties.Literals.Error_InvalidNumbers} {Properties.Literals.Error_IntegersOnly}";
+                    return;
+                }
+
+                (int largest, int lowest) = BasicExercises.LargestAndLowestOfThreeIntegers(numberInteger1, numberInteger2, numberInteger3);
+
+                Result = $"The largest of {numberInteger1}, {numberInteger2} and {numberInteger3} is " +
+                    $"{largest} and the lowest is {lowest}.";
             }
         }
 

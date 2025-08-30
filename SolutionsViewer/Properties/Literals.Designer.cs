@@ -385,6 +385,42 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Remove &quot;HP&quot; from String ähnelt.
+        /// </summary>
+        public static string BasicExercises_37 {
+            get {
+                return ResourceManager.GetString("BasicExercises_37", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Extract &quot;PH&quot; from String ähnelt.
+        /// </summary>
+        public static string BasicExercises_38 {
+            get {
+                return ResourceManager.GetString("BasicExercises_38", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Largest and Lowest of Three Integers ähnelt.
+        /// </summary>
+        public static string BasicExercises_39 {
+            get {
+                return ResourceManager.GetString("BasicExercises_39", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nearest to 20 or Return 0 ähnelt.
+        /// </summary>
+        public static string BasicExercises_40 {
+            get {
+                return ResourceManager.GetString("BasicExercises_40", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
