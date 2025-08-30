@@ -422,5 +422,12 @@
                 : input.Substring(1, 2) == "HP"
                     ? input.Remove(1, 2)
                     : input;
+
+        /// <summary>
+        /// Solution for basic exercise number 38.
+        /// </summary>
+        /// <param name="input">The string to check, if "PH" is extractable from the beginning.</param>
+        /// <returns>"PH", if extractable from the beginning of the given string; empty string else.</returns>
+        public static string ExtractPHromString(string input) => input.StartsWith("PH") ? "PH" : string.Empty;
     }
 }

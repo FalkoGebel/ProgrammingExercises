@@ -394,6 +394,15 @@ namespace SolutionsViewer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Extract &quot;PH&quot; from String ähnelt.
+        /// </summary>
+        public static string BasicExercises_38 {
+            get {
+                return ResourceManager.GetString("BasicExercises_38", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Basic Exercises ähnelt.
         /// </summary>
         public static string Categories_01 {
